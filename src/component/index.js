@@ -1,12 +1,40 @@
-import Modal from './modal';
+import Avatar from "./avatar";
+import Button from "./button";
+import Input from "./input";
+import Loading from "./loading";
+import Message from "./message";
+import Modal from "./modal";
+import Select from "./select";
+import Tag from "./tag";
 
-const components = [
-    Modal
+const component_list = [
+    Avatar,
+    Button,
+    Input,
+    Loading,
+    Message,
+    Modal,
+    Select,
+    Tag,
 ];
 
-const install = function (Vue) {
-    components.forEach(c => Vue.use(c));
+const install = function (v) {
+    component_list.forEach(function (c) {
+        if (c.install) {
+            v.use(c);
+        }
+    });
 };
 
-export default { install };
-export { Modal };
+export default {install};
+
+export {
+    Avatar,
+    Button,
+    Input,
+    Loading,
+    Message,
+    Modal,
+    Select,
+    Tag,
+};

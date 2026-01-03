@@ -1,3 +1,4 @@
+import "remixicon/fonts/remixicon.css";
 import Component from './component';
 import Service from './service';
 import Tool from './tool';

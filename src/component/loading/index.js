@@ -1,10 +1,10 @@
-import c from './Modal.vue';
+import c from './Loading.vue';
 import s from './service';
 
 c.install = function (v) {
     v.component(c.name, c);
-    if (!v.prototype.$Modal) {
-        v.prototype.$Modal = s;
+    if (!v.prototype.$Loading) {
+        v.prototype.$Loading = s;
     }
 };
 
