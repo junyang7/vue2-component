@@ -100,7 +100,6 @@ export default {
 .component {
     font-size: 14px;
     display: inline-block;
-    border: 1px solid #dcdee2;
     color: #515a6e;
     border-radius: 2px;
     cursor: default;
@@ -113,17 +112,21 @@ export default {
     align-items: center;
     justify-content: space-between;
     height: 36px;
+    border: 1px solid #dcdee2;
+    box-sizing: border-box;
 }
 
 .option-list {
     position: absolute;
+    box-sizing: border-box;
     width: 100%;
     z-index: 1;
-    left: -1px;
     background-color: #ffffff;
     border-left: 1px solid #dcdee2;
     border-right: 1px solid #dcdee2;
     border-bottom: 1px solid #dcdee2;
+    max-height: 360px;
+    overflow-y: auto;
 }
 
 .option-activated, .option {
