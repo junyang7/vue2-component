@@ -18,17 +18,19 @@
             </div>
         </div>
 
-        <div v-if="show_option_list">
+        <div
+            class="option-list"
+            v-if="show_option_list">
             <div
                 v-for="(a,b,c) in option_list"
                 :key="a.value"
                 @click="OptionClick(a)"
                 :class="`option ${value === a.value ? 'activated' : ''}`">
-                <div v-if="a.prefix" class="option-prefix">
+                <div v-if="a.hasOwnProperty('prefix') && a.prefix" class="option-prefix">
                     <i :class="a.prefix"></i>
                 </div>
                 <div class="option-label">{{ a.label }}</div>
-                <div v-if="a.suffix" class="option-suffix">
+                <div v-if="a.hasOwnProperty('suffix') && a.suffix" class="option-suffix">
                     <i :class="a.suffix"></i>
                 </div>
                 <div></div>
@@ -102,6 +104,8 @@ export default {
     color: #515a6e;
     border-radius: 2px;
     cursor: default;
+    background-color: #ffffff;
+    position: relative;
 }
 
 .select {
@@ -109,6 +113,17 @@ export default {
     align-items: center;
     justify-content: space-between;
     height: 36px;
+}
+
+.option-list {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    left: -1px;
+    background-color: #ffffff;
+    border-left: 1px solid #dcdee2;
+    border-right: 1px solid #dcdee2;
+    border-bottom: 1px solid #dcdee2;
 }
 
 .option-activated, .option {

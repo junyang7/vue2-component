@@ -5,14 +5,14 @@
             <div>size</div>
             <div style="display: flex; align-items: center; justify-content: flex-start; column-gap: 9px;">
                 <Avatar
-                    label="微博"
+                    label="新浪微博"
                     size="small"></Avatar>
                 <Avatar
-                    label="微博"
+                    label="新浪微博"
                     type="primary"
                     size="default"></Avatar>
                 <Avatar
-                    label="微博"
+                    label="新浪微博"
                     type="error"
                     size="large"></Avatar>
             </div>
