@@ -126,11 +126,11 @@ export default {
 }
 
 .component-checkbox-option-list {
-    position: fixed;
+    position: absolute;
     box-sizing: border-box;
     border: 1px solid #dcdee2;
     background-color: #ffffff;
-    /*width: 100%;*/
+    width: 100%;
     height: auto;
     max-height: 360px;
     overflow-y: auto;
