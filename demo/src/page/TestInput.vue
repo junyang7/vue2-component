@@ -4,13 +4,13 @@
         <div style="margin-bottom: 36px;">
             <div>默认值</div>
             <Input
-                v-model="value"/>
+                v-model="value" prefix="ri-checkbox-circle-line"/>
         </div>
 
         <div style="margin-bottom: 36px;">
             <div>默认提示</div>
             <Input
-                :placeholder="placeholder"/>
+                :placeholder="placeholder" suffix="ri-radio-button-fill"/>
         </div>
 
         <div style="margin-bottom: 36px;">

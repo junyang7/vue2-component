@@ -1,20 +1,30 @@
 import Avatar from "./avatar";
 import Button from "./button";
-import Input from "./input";
+import Checkbox from "./Checkbox";
+import CheckboxOption from "./CheckboxOption";
+import Input from "./Input";
 import Loading from "./loading";
 import Message from "./message";
 import Modal from "./modal";
-import Select from "./select";
+import Radio from "./Radio";
+import RadioOption from "./RadioOption";
+import Select from "./Select";
+import SelectOption from "./SelectOption";
 import Tag from "./tag";
 
 const component_list = [
     Avatar,
     Button,
+    Checkbox,
+    CheckboxOption,
     Input,
     Loading,
     Message,
     Modal,
+    Radio,
+    RadioOption,
     Select,
+    SelectOption,
     Tag,
 ];
 
@@ -31,10 +41,15 @@ export default {install};
 export {
     Avatar,
     Button,
+    Checkbox,
+    CheckboxOption,
     Input,
     Loading,
     Message,
     Modal,
+    Radio,
+    RadioOption,
     Select,
+    SelectOption,
     Tag,
 };

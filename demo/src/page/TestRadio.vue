@@ -3,58 +3,53 @@
 
         <div style="margin-bottom: 36px;">
             <div>默认</div>
-            <Select
-                style="width: 600px;"
+            <Radio
                 :option_list="option_list"
-                :placeholder="placeholder"
-                v-model="value"></Select>
-        </div>
-
-        <div style="margin-bottom: 36px;">
-            <div>默认</div>
-            <Select
-                :option_list="option_list"
-                v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <SelectOption
-                        :label="a.label"
-                        :value="a.value"
-                        :activated="value === a.value"></SelectOption>
-                </template>
-            </Select>
-        </div>
-
-        <div style="margin-bottom: 36px;">
-            <div>自定义：手动添加option</div>
-            <Select
-                :option_list="option_list"
-                v-model="value">
-                <SelectOption
-                    :label="option_list[0].label"
-                    :value="option_list[0].value"
-                    :activated="value === option_list[0].value"></SelectOption>
-                <SelectOption
-                    :label="option_list[1].label"
-                    :value="option_list[1].value"
-                    :activated="value === option_list[1].value"></SelectOption>
-                <SelectOption
-                    :label="option_list[2].label"
-                    :value="option_list[2].value"
-                    :activated="value === option_list[2].value"></SelectOption>
-                <SelectOption
-                    :label="option_list[3].label"
-                    :value="option_list[3].value"
-                    :activated="value === option_list[3].value"></SelectOption>
-            </Select>
+                v-model="value"></Radio>
         </div>
 
         <div style="margin-bottom: 36px;">
             <div>自定义：循环遍历option</div>
-            <Select
-                :option_list="option_list"
+            <Radio
                 v-model="value">
                 <template v-for="(a,b,c) in option_list">
-                    <SelectOption
+                    <RadioOption
+                        :label="a.label"
+                        :value="a.value"
+                        :activated="value === a.value"></RadioOption>
+                </template>
+            </Radio>
+        </div>
+
+        <div style="margin-bottom: 36px;">
+            <div>自定义：手动添加option</div>
+            <Radio
+                v-model="value">
+                <RadioOption
+                    :label="option_list[0].label"
+                    :value="option_list[0].value"
+                    :activated="value === option_list[0].value"></RadioOption>
+                <RadioOption
+                    :label="option_list[1].label"
+                    :value="option_list[1].value"
+                    :activated="value === option_list[1].value"></RadioOption>
+                <RadioOption
+                    :label="option_list[2].label"
+                    :value="option_list[2].value"
+                    :activated="value === option_list[2].value"></RadioOption>
+                <RadioOption
+                    :label="option_list[3].label"
+                    :value="option_list[3].value"
+                    :activated="value === option_list[3].value"></RadioOption>
+            </Radio>
+        </div>
+
+        <div style="margin-bottom: 36px;">
+            <div>自定义：循环遍历option</div>
+            <Radio
+                v-model="value">
+                <template v-for="(a,b,c) in option_list">
+                    <RadioOption
                         :label="a.label"
                         :value="a.value"
                         :activated="value === a.value">
@@ -70,9 +65,17 @@
                                 <Tag type="error" size="small">我的最爱</Tag>
                             </div>
                         </div>
-                    </SelectOption>
+                    </RadioOption>
                 </template>
-            </Select>
+            </Radio>
+        </div>
+
+        <div style="margin-bottom: 36px;">
+            <div>调整布局</div>
+            <Radio
+                style="display: inline-flex; column-gap: 18px;"
+                :option_list="option_list"
+                v-model="value"></Radio>
         </div>
 
     </div>
@@ -80,7 +83,7 @@
 
 <script>
 export default {
-    name: "TestSelect",
+    name: "TestRadio",
     data() {
         return {
             placeholder: "请选择",
@@ -99,7 +102,7 @@ export default {
                     suffix: "",
                 },
                 {
-                    label: "橘子hhhhahhdsahd啊哈说法",
+                    label: "橘子",
                     value: 2,
                     prefix: "ri-apple-line",
                     suffix: "",

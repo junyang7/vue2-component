@@ -28,6 +28,10 @@ export default {
                     url: "/button",
                 },
                 {
+                    label: "多选",
+                    url: "/checkbox",
+                },
+                {
                     label: "单文本输入框",
                     url: "/input",
                 },
@@ -42,6 +46,10 @@ export default {
                 {
                     label: "弹框",
                     url: "/modal",
+                },
+                {
+                    label: "单选",
+                    url: "/radio",
                 },
                 {
                     label: "下拉框",
