@@ -10,7 +10,7 @@
                 <div v-if="computed_option?.prefix" class="option-prefix">
                     <i :class="computed_option.prefix"></i>
                 </div>
-                <div class="option-label">{{ computed_option?.label || "" }}</div>
+                <div class="option-label">{{ computed_option?.[option_label_name] || "" }}</div>
                 <div v-if="computed_option?.suffix" class="option-suffix">
                     <i :class="computed_option.suffix"></i>
                 </div>
@@ -25,13 +25,13 @@
             v-if="show_option_list">
             <div
                 v-for="(a,b,c) in option_list"
-                :key="a.value"
+                :key="a[option_value_name]"
                 @click="OptionClick(a)"
-                :class="`option ${value === a.value ? 'activated' : ''}`">
+                :class="`option ${value === a[option_value_name] ? 'activated' : ''}`">
                 <div v-if="a?.prefix" class="option-prefix">
                     <i :class="a.prefix"></i>
                 </div>
-                <div class="option-label">{{ a.label }}</div>
+                <div class="option-label">{{ a[option_label_name] }}</div>
                 <div v-if="a?.suffix" class="option-suffix">
                     <i :class="a.suffix"></i>
                 </div>
@@ -65,6 +65,14 @@ export default {
                 ];
             },
         },
+        option_label_name: {
+            type: String,
+            default: "label",
+        },
+        option_value_name: {
+            type: String,
+            default: "value",
+        },
     },
     data() {
         return {
@@ -76,7 +84,7 @@ export default {
             this.show_option_list = true;
         },
         OptionClick(option) {
-            this.$emit("input", option.value);
+            this.$emit("input", option[this.option_value_name]);
             this.show_option_list = false;
         },
         DocumentEventMousedown(event) {
@@ -92,7 +100,7 @@ export default {
                 if (Array.isArray(this.option_list)) {
                     for (let i = 0; i < this.option_list.length; i++) {
                         const option = this.option_list[i];
-                        if (option.value === this.value) {
+                        if (option[this.option_value_name] === this.value) {
                             return option;
                         }
                     }
