@@ -1,7 +1,6 @@
-
 {
     "name": "vue2-component",
-    "version": "0.0.1+20260104152621",
+    "version": "0.0.1+20260104152640",
     "main": "src/index.js",
     "dependencies": {
         "axios": "^1.9.0",
