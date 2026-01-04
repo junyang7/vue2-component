@@ -1,5 +1,6 @@
 <template>
     <input
+        ref="input"
         v-model="computed_value"
         :placeholder="placeholder"/>
 </template>
@@ -16,6 +17,11 @@ export default {
             type: String,
             default: "",
         },
+    },
+    methods: {
+        focus() {
+            this.$refs.input.focus();
+        }
     },
     computed: {
         computed_value: {
