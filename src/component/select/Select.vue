@@ -7,11 +7,11 @@
             @click="SelectClick"
             class="select">
             <div class="option-activated">
-                <div v-if="computed_option.hasOwnProperty('prefix') && computed_option.prefix" class="option-prefix">
+                <div v-if="computed_option?.prefix" class="option-prefix">
                     <i :class="computed_option.prefix"></i>
                 </div>
                 <div class="option-label">{{ computed_option.label }}</div>
-                <div v-if="computed_option.hasOwnProperty('suffix') && computed_option.suffix" class="option-suffix">
+                <div v-if="computed_option?.suffix" class="option-suffix">
                     <i :class="computed_option.suffix"></i>
                 </div>
             </div>
@@ -28,11 +28,11 @@
                 :key="a.value"
                 @click="OptionClick(a)"
                 :class="`option ${value === a.value ? 'activated' : ''}`">
-                <div v-if="a.hasOwnProperty('prefix') && a.prefix" class="option-prefix">
+                <div v-if="a?.prefix" class="option-prefix">
                     <i :class="a.prefix"></i>
                 </div>
                 <div class="option-label">{{ a.label }}</div>
-                <div v-if="a.hasOwnProperty('suffix') && a.suffix" class="option-suffix">
+                <div v-if="a?.suffix" class="option-suffix">
                     <i :class="a.suffix"></i>
                 </div>
                 <div></div>
