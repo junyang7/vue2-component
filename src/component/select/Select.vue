@@ -10,7 +10,7 @@
                 <div v-if="computed_option?.prefix" class="option-prefix">
                     <i :class="computed_option.prefix"></i>
                 </div>
-                <div class="option-label">{{ computed_option.label }}</div>
+                <div class="option-label">{{ computed_option?.label || "" }}</div>
                 <div v-if="computed_option?.suffix" class="option-suffix">
                     <i :class="computed_option.suffix"></i>
                 </div>
