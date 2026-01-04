@@ -52,6 +52,7 @@ export default {
     display: flex;
     align-items: center;
     height: 36px;
+    margin-right: 36px;
 }
 
 .prefix {
