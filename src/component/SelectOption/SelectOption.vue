@@ -42,6 +42,7 @@ export default {
     height: 36px;
     width: 100%;
     box-sizing: border-box;
+    margin-right: 36px;
 }
 
 .component-select-option:hover {
