@@ -1,5 +1,7 @@
 <template>
-    <div class="component">
+    <div
+        ref="component"
+        class="component">
 
         <div
             @click="SelectClick"
@@ -77,6 +79,12 @@ export default {
             this.$emit("input", option.value);
             this.show_option_list = false;
         },
+        DocumentEventMousedown(event) {
+            const component = this.$refs.component;
+            if (component && !component.contains(event.target)) {
+                this.show_option_list = false;
+            }
+        },
     },
     computed: {
         computed_option: {
@@ -92,6 +100,12 @@ export default {
                 return this.option_list[0];
             },
         }
+    },
+    mounted() {
+        document.addEventListener("mousedown", this.DocumentEventMousedown);
+    },
+    beforeDestroy() {
+        document.removeEventListener("mousedown", this.DocumentEventMousedown);
     },
 }
 </script>
