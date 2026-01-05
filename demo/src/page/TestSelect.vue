@@ -5,62 +5,62 @@
             <div>默认</div>
             <Select
                 style="width: 600px;"
-                :option_list="option_list"
-                :placeholder="placeholder"
-                v-model="value"></Select>
+                :option_list="test1.option_list"
+                :placeholder="test1.placeholder"
+                v-model="test1.value"></Select>
         </div>
 
         <div style="margin-bottom: 36px;">
             <div>默认</div>
             <Select
-                :option_list="option_list"
-                v-model="value">
+                :option_list="test2.option_list"
+                v-model="test2.value">
                 <SelectOption
-                    v-for="(a,b,c) in option_list"
+                    v-for="(a,b,c) in test2.option_list"
                     :key="a.value"
                     :label="a.label"
                     :value="a.value"
-                    :activated="value === a.value"></SelectOption>
+                    :activated="test2.value === a.value"></SelectOption>
             </Select>
         </div>
 
         <div style="margin-bottom: 36px;">
             <div>自定义：手动添加option</div>
             <Select
-                :option_list="option_list"
-                v-model="value">
+                :option_list="test3.option_list"
+                v-model="test3.value">
                 <SelectOption
-                    :label="option_list[0].label"
-                    :value="option_list[0].value"
-                    :activated="value === option_list[0].value"></SelectOption>
+                    :label="test3.option_list[0].label"
+                    :value="test3.option_list[0].value"
+                    :activated="test3.value === test3.option_list[0].value"></SelectOption>
                 <SelectOption
-                    :label="option_list[1].label"
-                    :value="option_list[1].value"
-                    :activated="value === option_list[1].value"></SelectOption>
+                    :label="test3.option_list[1].label"
+                    :value="test3.option_list[1].value"
+                    :activated="test3.value === test3.option_list[1].value"></SelectOption>
                 <SelectOption
-                    :label="option_list[2].label"
-                    :value="option_list[2].value"
-                    :activated="value === option_list[2].value"></SelectOption>
+                    :label="test3.option_list[2].label"
+                    :value="test3.option_list[2].value"
+                    :activated="test3.value === test3.option_list[2].value"></SelectOption>
                 <SelectOption
-                    :label="option_list[3].label"
-                    :value="option_list[3].value"
-                    :activated="value === option_list[3].value"></SelectOption>
+                    :label="test3.option_list[3].label"
+                    :value="test3.option_list[3].value"
+                    :activated="test3.value === test3.option_list[3].value"></SelectOption>
             </Select>
         </div>
 
         <div style="margin-bottom: 36px;">
             <div>自定义：循环遍历option</div>
             <Select
-                :option_list="option_list"
-                v-model="value">
+                :option_list="test4.option_list"
+                v-model="test4.value">
                 <SelectOption
-                    v-for="(a,b,c) in option_list"
+                    v-for="(a,b,c) in test4.option_list"
                     :key="a.value"
                     :label="a.label"
                     :value="a.value"
-                    :activated="value === a.value">
+                    :activated="test4.value === a.value">
                     <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
-                        <div v-if="value === a.value" style="color: #ed4014;">
+                        <div v-if="test4.value === a.value" style="color: #ed4014;">
                             <i class="ri-checkbox-fill"></i>
                         </div>
                         <div v-else>
@@ -83,34 +83,156 @@ export default {
     name: "TestSelect",
     data() {
         return {
-            placeholder: "请选择",
-            value: 0,
-            option_list: [
-                {
-                    label: "全部",
-                    value: 0,
-                    prefix: "ri-apple-line",
-                    suffix: "",
-                },
-                {
-                    label: "苹果",
-                    value: 1,
-                    prefix: "ri-apple-line",
-                    suffix: "",
-                },
-                {
-                    label: "橘子hhhhahhdsahd啊哈说法",
-                    value: 2,
-                    prefix: "ri-apple-line",
-                    suffix: "",
-                },
-                {
-                    label: "香蕉",
-                    value: 3,
-                    prefix: "ri-apple-line",
-                    suffix: "",
-                },
-            ],
+            test1: {
+                placeholder: "请选择",
+                value: 0,
+                option_list: [
+                    {
+                        label: "1全部",
+                        value: 0,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "1苹果",
+                        value: 1,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "1橘子hhhhahhdsahd啊哈说法",
+                        value: 2,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "1香蕉",
+                        value: 3,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                ],
+            },
+            test2: {
+                placeholder: "请选择",
+                value: 0,
+                option_list: [
+                    {
+                        label: "2全部",
+                        value: 0,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "2苹果",
+                        value: 1,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "2橘子hhhhahhdsahd啊哈说法",
+                        value: 2,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "2香蕉",
+                        value: 3,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                ],
+            },
+            test3: {
+                placeholder: "请选择",
+                value: 0,
+                option_list: [
+                    {
+                        label: "3全部",
+                        value: 0,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "3苹果",
+                        value: 1,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "3橘子hhhhahhdsahd啊哈说法",
+                        value: 2,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "3香蕉",
+                        value: 3,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                ],
+            },
+            test4: {
+                placeholder: "请选择",
+                value: 0,
+                option_list: [
+                    {
+                        label: "4全部",
+                        value: 0,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "4苹果",
+                        value: 1,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "4橘子hhhhahhdsahd啊哈说法",
+                        value: 2,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "4香蕉",
+                        value: 3,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                ],
+            },
+            test5: {
+                placeholder: "请选择",
+                value: 0,
+                option_list: [
+                    {
+                        label: "5全部",
+                        value: 0,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "5苹果",
+                        value: 1,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "5橘子hhhhahhdsahd啊哈说法",
+                        value: 2,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "5香蕉",
+                        value: 3,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                ],
+            },
         };
     },
 }

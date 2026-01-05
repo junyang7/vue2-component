@@ -21,10 +21,9 @@
 </template>
 
 <script>
-import jc from "js-common";
-
 export default {
     name: "CheckboxOption",
+    inject: ["context"],
     props: {
         label: {
             type: String,
@@ -41,7 +40,9 @@ export default {
     },
     methods: {
         CheckboxOptionClick() {
-            jc._VueEvent.produce("checkbox-option-click", this.value);
+            if (this.context) {
+                this.context.CheckboxOptionClick(this.value);
+            }
         },
     },
 }

@@ -1,16 +1,16 @@
-import Avatar from "./avatar";
-import Button from "./button";
+import Avatar from "./Avatar";
+import Button from "./Button";
 import Checkbox from "./Checkbox";
 import CheckboxOption from "./CheckboxOption";
 import Input from "./Input";
-import Loading from "./loading";
-import Message from "./message";
-import Modal from "./modal";
+import Loading from "./Loading";
+import Message from "./Message";
+import Modal from "./Modal";
 import Radio from "./Radio";
 import RadioOption from "./RadioOption";
 import Select from "./Select";
 import SelectOption from "./SelectOption";
-import Tag from "./tag";
+import Tag from "./Tag";
 
 const component_list = [
     Avatar,

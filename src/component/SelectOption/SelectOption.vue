@@ -9,10 +9,9 @@
 </template>
 
 <script>
-import jc from "js-common";
-
 export default {
     name: "SelectOption",
+    inject: ["context"],
     props: {
         label: {
             type: String,
@@ -29,7 +28,9 @@ export default {
     },
     methods: {
         SelectOptionClick() {
-            jc._VueEvent.produce("select-option-click", this.value);
+            if (this.context) {
+                this.context.SelectOptionClick(this.value);
+            }
         },
     },
 }

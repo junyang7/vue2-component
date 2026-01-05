@@ -15,7 +15,6 @@
 
 <script>
 import RadioOption from "../RadioOption/RadioOption.vue";
-import jc from "js-common"
 
 export default {
     name: "Radio",
@@ -45,22 +44,15 @@ export default {
             default: "value",
         },
     },
-    data() {
-        return {
-            inner_value: null,
-        };
-    },
     methods: {
         RadioOptionClick(value) {
             this.$emit("input", value);
         },
     },
-    mounted() {
-        this.inner_value = this.value;
-        jc._VueEvent.consume("radio-option-click", this.RadioOptionClick);
-    },
-    beforeDestroy() {
-        jc._VueEvent.destroy("radio-option-click", this.RadioOptionClick);
+    provide() {
+        return {
+            context: this,
+        };
     },
 }
 </script>

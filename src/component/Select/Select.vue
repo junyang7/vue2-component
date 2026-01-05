@@ -21,7 +21,6 @@
 
 <script>
 import SelectOption from "../SelectOption/SelectOption.vue";
-import jc from "js-common";
 
 export default {
     name: "Select",
@@ -91,12 +90,15 @@ export default {
         }
     },
     mounted() {
-        jc._VueEvent.consume("select-option-click", this.SelectOptionClick);
         document.addEventListener("mousedown", this.DocumentEventMousedown);
     },
     beforeDestroy() {
-        jc._VueEvent.destroy("select-option-click", this.SelectOptionClick);
         document.removeEventListener("mousedown", this.DocumentEventMousedown);
+    },
+    provide() {
+        return {
+            context: this,
+        };
     },
 }
 </script>

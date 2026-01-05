@@ -6,7 +6,7 @@
             <CheckboxOption
                 v-for="(a,b,c) in option_list"
                 :key="a[option_value_name]"
-                :activated="value.includes(a[option_value_name])"
+                :activated="inner_value.includes(a[option_value_name])"
                 :value="a[option_value_name]"
                 :label="a[option_label_name]"></CheckboxOption>
         </slot>
@@ -63,10 +63,11 @@ export default {
     },
     mounted() {
         this.inner_value = this.value;
-        jc._VueEvent.consume("checkbox-option-click", this.CheckboxOptionClick);
     },
-    beforeDestroy() {
-        jc._VueEvent.destroy("checkbox-option-click", this.CheckboxOptionClick);
+    provide() {
+        return {
+            context: this,
+        };
     },
 }
 </script>

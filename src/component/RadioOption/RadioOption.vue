@@ -21,10 +21,9 @@
 </template>
 
 <script>
-import jc from "js-common";
-
 export default {
     name: "RadioOption",
+    inject: ["context"],
     props: {
         label: {
             type: String,
@@ -41,7 +40,9 @@ export default {
     },
     methods: {
         RadioOptionClick() {
-            jc._VueEvent.produce("radio-option-click", this.value);
+            if (this.context) {
+                this.context.RadioOptionClick(this.value);
+            }
         },
     },
 }
