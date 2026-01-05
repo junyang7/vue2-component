@@ -18,7 +18,7 @@
                         </slot>
                     </div>
                     <div style="height: 9px;"></div>
-                    <div style="color: #515a6e; font-size: 14px; ">
+                    <div style="color: #515a6e; font-size: 14px; word-break: break-all; white-space: break-spaces;">
                         <slot
                             name="content">{{ inner_content }}
                         </slot>

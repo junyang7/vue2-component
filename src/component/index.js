@@ -2,6 +2,7 @@ import Avatar from "./Avatar";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
 import CheckboxOption from "./CheckboxOption";
+import Copy from "./Copy";
 import Input from "./Input";
 import Loading from "./Loading";
 import Message from "./Message";
@@ -17,6 +18,7 @@ const component_list = [
     Button,
     Checkbox,
     CheckboxOption,
+    Copy,
     Input,
     Loading,
     Message,
@@ -43,6 +45,7 @@ export {
     Button,
     Checkbox,
     CheckboxOption,
+    Copy,
     Input,
     Loading,
     Message,
