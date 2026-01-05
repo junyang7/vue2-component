@@ -15,12 +15,12 @@
             <Select
                 :option_list="option_list"
                 v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <SelectOption
-                        :label="a.label"
-                        :value="a.value"
-                        :activated="value === a.value"></SelectOption>
-                </template>
+                <SelectOption
+                    v-for="(a,b,c) in option_list"
+                    :key="a.value"
+                    :label="a.label"
+                    :value="a.value"
+                    :activated="value === a.value"></SelectOption>
             </Select>
         </div>
 
@@ -53,25 +53,25 @@
             <Select
                 :option_list="option_list"
                 v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <SelectOption
-                        :label="a.label"
-                        :value="a.value"
-                        :activated="value === a.value">
-                        <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
-                            <div v-if="value === a.value" style="color: #ed4014;">
-                                <i class="ri-checkbox-fill"></i>
-                            </div>
-                            <div v-else>
-                                <i class="ri-checkbox-blank-line"></i>
-                            </div>
-                            <div>{{ a.label }}</div>
-                            <div v-if="a.value === 2">
-                                <Tag type="error" size="small">我的最爱</Tag>
-                            </div>
+                <SelectOption
+                    v-for="(a,b,c) in option_list"
+                    :key="a.value"
+                    :label="a.label"
+                    :value="a.value"
+                    :activated="value === a.value">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
+                        <div v-if="value === a.value" style="color: #ed4014;">
+                            <i class="ri-checkbox-fill"></i>
                         </div>
-                    </SelectOption>
-                </template>
+                        <div v-else>
+                            <i class="ri-checkbox-blank-line"></i>
+                        </div>
+                        <div>{{ a.label }}</div>
+                        <div v-if="a.value === 2">
+                            <Tag type="error" size="small">我的最爱</Tag>
+                        </div>
+                    </div>
+                </SelectOption>
             </Select>
         </div>
 

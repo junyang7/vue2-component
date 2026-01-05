@@ -12,12 +12,12 @@
             <div>自定义：循环遍历option</div>
             <Radio
                 v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <RadioOption
-                        :label="a.label"
-                        :value="a.value"
-                        :activated="value === a.value"></RadioOption>
-                </template>
+                <RadioOption
+                    v-for="(a,b,c) in option_list"
+                    :key="a.value"
+                    :label="a.label"
+                    :value="a.value"
+                    :activated="value === a.value"></RadioOption>
             </Radio>
         </div>
 
@@ -48,25 +48,25 @@
             <div>自定义：循环遍历option</div>
             <Radio
                 v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <RadioOption
-                        :label="a.label"
-                        :value="a.value"
-                        :activated="value === a.value">
-                        <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
-                            <div v-if="value === a.value" style="color: #ed4014;">
-                                <i class="ri-checkbox-fill"></i>
-                            </div>
-                            <div v-else>
-                                <i class="ri-checkbox-blank-line"></i>
-                            </div>
-                            <div>{{ a.label }}</div>
-                            <div v-if="a.value === 2">
-                                <Tag type="error" size="small">我的最爱</Tag>
-                            </div>
+                <RadioOption
+                    v-for="(a,b,c) in option_list"
+                    :key="a.value"
+                    :label="a.label"
+                    :value="a.value"
+                    :activated="value === a.value">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
+                        <div v-if="value === a.value" style="color: #ed4014;">
+                            <i class="ri-checkbox-fill"></i>
                         </div>
-                    </RadioOption>
-                </template>
+                        <div v-else>
+                            <i class="ri-checkbox-blank-line"></i>
+                        </div>
+                        <div>{{ a.label }}</div>
+                        <div v-if="a.value === 2">
+                            <Tag type="error" size="small">我的最爱</Tag>
+                        </div>
+                    </div>
+                </RadioOption>
             </Radio>
         </div>
 

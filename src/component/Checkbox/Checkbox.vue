@@ -3,13 +3,12 @@
         @checkbox-option-click="CheckboxOptionClick"
         class="component">
         <slot>
-            <div
-                v-for="(a,b,c) in option_list">
-                <CheckboxOption
-                    :activated="value.includes(a[option_value_name])"
-                    :value="a[option_value_name]"
-                    :label="a[option_label_name]"></CheckboxOption>
-            </div>
+            <CheckboxOption
+                v-for="(a,b,c) in option_list"
+                :key="a[option_value_name]"
+                :activated="value.includes(a[option_value_name])"
+                :value="a[option_value_name]"
+                :label="a[option_label_name]"></CheckboxOption>
         </slot>
     </div>
 </template>

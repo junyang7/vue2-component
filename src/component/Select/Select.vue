@@ -10,6 +10,7 @@
             <slot>
                 <SelectOption
                     v-for="(a,b,c) in option_list"
+                    :key="a[option_value_name]"
                     :activated="value === a[option_value_name]"
                     :value="a[option_value_name]"
                     :label="a[option_label_name]"></SelectOption>

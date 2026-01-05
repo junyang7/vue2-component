@@ -12,12 +12,12 @@
             <div>自定义：循环遍历option</div>
             <Checkbox
                 v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <CheckboxOption
-                        :label="a.label"
-                        :value="a.value"
-                        :activated="value.includes(a.value)"></CheckboxOption>
-                </template>
+                <CheckboxOption
+                    v-for="(a,b,c) in option_list"
+                    :key="a.value"
+                    :label="a.label"
+                    :value="a.value"
+                    :activated="value.includes(a.value)"></CheckboxOption>
             </Checkbox>
         </div>
 
@@ -48,24 +48,24 @@
             <div>自定义：循环遍历option</div>
             <Checkbox
                 v-model="value">
-                <template v-for="(a,b,c) in option_list">
-                    <CheckboxOption
-                        :label="a.label"
-                        :value="a.value">
-                        <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
-                            <div v-if="value.includes(a.value)" style="color: #ed4014;">
-                                <i class="ri-checkbox-multiple-fill"></i>
-                            </div>
-                            <div v-else>
-                                <i class="ri-checkbox-multiple-blank-line"></i>
-                            </div>
-                            <div>{{ a.label }}</div>
-                            <div v-if="a.value === 2">
-                                <Tag type="warning" size="small">我的最爱</Tag>
-                            </div>
+                <CheckboxOption
+                    v-for="(a,b,c) in option_list"
+                    :key="a.value"
+                    :label="a.label"
+                    :value="a.value">
+                    <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
+                        <div v-if="value.includes(a.value)" style="color: #ed4014;">
+                            <i class="ri-checkbox-multiple-fill"></i>
                         </div>
-                    </CheckboxOption>
-                </template>
+                        <div v-else>
+                            <i class="ri-checkbox-multiple-blank-line"></i>
+                        </div>
+                        <div>{{ a.label }}</div>
+                        <div v-if="a.value === 2">
+                            <Tag type="warning" size="small">我的最爱</Tag>
+                        </div>
+                    </div>
+                </CheckboxOption>
             </Checkbox>
         </div>
 
