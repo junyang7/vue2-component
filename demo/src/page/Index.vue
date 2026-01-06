@@ -40,6 +40,10 @@ export default {
                     url: "/loading",
                 },
                 {
+                    label: "菜单",
+                    url: "/menu",
+                },
+                {
                     label: "消息",
                     url: "/message",
                 },

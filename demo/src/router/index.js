@@ -18,6 +18,7 @@ const routes = [
             {path: "/checkbox", component: () => import("@/page/TestCheckbox"),},
             {path: "/Input", component: () => import("@/page/TestInput"),},
             {path: "/Loading", component: () => import("@/page/TestLoading"),},
+            {path: "/Menu", component: () => import("@/page/TestMenu.vue"),},
             {path: "/Message", component: () => import("@/page/TestMessage"),},
             {path: "/Modal", component: () => import("@/page/TestModal"),},
             {path: "/radio", component: () => import("@/page/TestRadio"),},

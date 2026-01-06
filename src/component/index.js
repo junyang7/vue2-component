@@ -5,6 +5,7 @@ import CheckboxOption from "./CheckboxOption";
 import Copy from "./Copy";
 import Input from "./Input";
 import Loading from "./Loading";
+import Menu from "./Menu";
 import Message from "./Message";
 import Modal from "./Modal";
 import Radio from "./Radio";
@@ -12,6 +13,7 @@ import RadioOption from "./RadioOption";
 import Select from "./Select";
 import SelectOption from "./SelectOption";
 import Tag from "./Tag";
+import Tree from "./Tree";
 
 const component_list = [
     Avatar,
@@ -21,6 +23,7 @@ const component_list = [
     Copy,
     Input,
     Loading,
+    Menu,
     Message,
     Modal,
     Radio,
@@ -28,6 +31,7 @@ const component_list = [
     Select,
     SelectOption,
     Tag,
+    Tree,
 ];
 
 const install = function (v) {
@@ -48,6 +52,7 @@ export {
     Copy,
     Input,
     Loading,
+    Menu,
     Message,
     Modal,
     Radio,
@@ -55,4 +60,5 @@ export {
     Select,
     SelectOption,
     Tag,
+    Tree,
 };
