@@ -10,11 +10,15 @@
                 }">
 
                 <div class="l">
-                    <div class="indent" :style="{width:`${deep*computed_setting.node_indent+18}px`}"></div>
+                    <div class="indent"
+                         :style="{width:`${deep*computed_setting.node_indent+computed_setting.node_prefix_space_left}px`}"></div>
                     <div>
                         <i :class="a.prefix"></i>
                     </div>
-                    <div style="margin-left: 8px;">{{ a[computed_setting.label] }}</div>
+                    <div :style="{
+                        marginLeft: `${computed_setting.node_label_space_left}px`,
+                    }">{{ a[computed_setting.label] }}
+                    </div>
                 </div>
 
                 <div class="r">
@@ -87,6 +91,8 @@ export default {
                 value: "id",
                 node_height: 36,
                 node_indent: 18,
+                node_prefix_space_left: 9,
+                node_label_space_left: 4,
             },
         };
     },
@@ -106,7 +112,7 @@ export default {
             }
             this.NodeMenuClick(menu);
         },
-        NodeMenuClick(menu){
+        NodeMenuClick(menu) {
             this.$emit("click", menu);
         },
     },
@@ -165,6 +171,7 @@ export default {
     justify-content: center;
     height: 100%;
 }
+
 .activated {
     color: #2d8cf0;
     background-color: #f0faff;
