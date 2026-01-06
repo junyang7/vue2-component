@@ -10,7 +10,7 @@
                 }">
 
                 <div class="l">
-                    <div class="indent" :style="{width:`${deep*computed_setting.node_indent+9}px`}"></div>
+                    <div class="indent" :style="{width:`${deep*computed_setting.node_indent+18}px`}"></div>
                     <div>
                         <i :class="a.prefix"></i>
                     </div>
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="r">
-                    <div style="margin: 0 9px;">
+                    <div style="margin: 0 18px;">
                         <i
                             v-show="Array.isArray(a.children) && a.children.length > 0"
                             :class="`${show[a[computed_setting.value]] ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'}`"></i>
