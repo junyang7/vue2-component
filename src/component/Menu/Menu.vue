@@ -1,13 +1,12 @@
 <template>
     <div class="component-menu">
-        <div v-for="(a,b,c) in option_list" :key="a[default_setting.value]">
-
+        <div v-for="(a,b,c) in option_list" :key="a[computed_setting.value]">
             <!--节点区域-->
             <div
                 @click="MenuClick(a)"
                 :class="{
                     one: true,
-                    activated: a[default_setting.value] === inner_value,
+                    activated: a[computed_setting.value] === inner_value,
                 }">
 
                 <div class="l">
@@ -15,14 +14,14 @@
                     <div>
                         <i :class="a.prefix"></i>
                     </div>
-                    <div style="margin-left: 4px;">{{ a[default_setting.label] }}</div>
+                    <div style="margin-left: 4px;">{{ a[computed_setting.label] }}</div>
                 </div>
 
                 <div class="r">
                     <div style="margin: 0 9px;">
                         <i
                             v-show="Array.isArray(a.children) && a.children.length > 0"
-                            :class="`${show[a[default_setting.value]] ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'}`"></i>
+                            :class="`${show[a[computed_setting.value]] ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'}`"></i>
                     </div>
                 </div>
 
@@ -31,9 +30,9 @@
             <!--子级区域-->
             <Menu
                 @click="NodeMenuClick"
-                v-show="show[a[default_setting.value]]"
+                v-show="show[a[computed_setting.value]]"
                 v-if="Array.isArray(a.children)"
-                :setting="default_setting"
+                :setting="computed_setting"
                 :option_list="a.children"
                 :deep="deep+1"
                 v-model="inner_value"></Menu>

@@ -12,6 +12,17 @@
             </div>
         </div>
 
+        <div style="margin-bottom: 36px;">
+            <div>size</div>
+            <div style="width: 300px;">
+                <Menu
+                    @click="MenuClick"
+                    :setting="menu.setting"
+                    :option_list="menu.tree"
+                    v-model="menu.value"></Menu>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -20,6 +31,112 @@ export default {
     name: "TestMenu",
     data() {
         return {
+            menu: {
+                value: null,
+                setting: {
+                    label: "name",
+                    value: "access_id",
+                },
+                tree: [
+                    {
+                        "access_id": 1,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "用户",
+                        "url": "/user",
+                        "icon": "",
+                        "rank": 1,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 2,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "环境",
+                        "url": "/runtime",
+                        "icon": "",
+                        "rank": 4,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 3,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "项目",
+                        "url": "/project",
+                        "icon": "",
+                        "rank": 4,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 4,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "镜像",
+                        "url": "/image",
+                        "icon": "",
+                        "rank": 4,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 5,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "模式",
+                        "url": "/mode",
+                        "icon": "",
+                        "rank": 4,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 6,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "服务器",
+                        "url": "/server",
+                        "icon": "",
+                        "rank": 4,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 7,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "角色",
+                        "url": "/role",
+                        "icon": "",
+                        "rank": 2,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    },
+                    {
+                        "access_id": 8,
+                        "type": 1,
+                        "type_name": "菜单",
+                        "name": "权限",
+                        "url": "/access",
+                        "icon": "",
+                        "rank": 3,
+                        "pid": 0,
+                        "prefix": "",
+                        "children": []
+                    }
+                ],
+            },
+
             data1: {
                 value: 111,
                 setting: {
