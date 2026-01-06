@@ -14,7 +14,7 @@
                     <div>
                         <i :class="a.prefix"></i>
                     </div>
-                    <div style="margin-left: 4px;">{{ a[computed_setting.label] }}</div>
+                    <div style="margin-left: 8px;">{{ a[computed_setting.label] }}</div>
                 </div>
 
                 <div class="r">
