@@ -3,6 +3,9 @@
         <div v-for="(a,b,c) in option_list" :key="a[computed_setting.value]">
             <!--节点区域-->
             <div
+                :style="{
+                height: `${computed_setting.node_height}px`,
+                }"
                 @click="MenuClick(a)"
                 :class="{
                     one: true,
