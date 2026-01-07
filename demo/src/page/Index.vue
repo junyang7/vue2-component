@@ -32,6 +32,10 @@ export default {
                     url: "/checkbox",
                 },
                 {
+                    label: "复制",
+                    url: "/copy",
+                },
+                {
                     label: "单文本输入框",
                     url: "/input",
                 },
