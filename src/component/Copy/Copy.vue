@@ -44,8 +44,8 @@ export default {
                     textarea.select();
                     document.execCommand("copy");
                     document.body.removeChild(textarea);
-                    this.$Message.success("已复制");
                 }
+                this.$Message.success("已复制");
                 this.done = true;
                 setTimeout(() => (this.done = false), 1000);
             } catch (err) {
