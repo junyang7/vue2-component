@@ -152,6 +152,7 @@ export default {
     align-items: center;
     height: 36px;
     justify-content: space-between;
+    cursor: default;
 }
 
 .component-menu .one:hover {
