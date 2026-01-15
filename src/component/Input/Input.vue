@@ -1,5 +1,7 @@
 <template>
-    <div :class="`component ${activated ? 'activated' : ''}`">
+    <div
+        @click="ComponentClick"
+        :class="`component ${activated ? 'activated' : ''}`">
         <div v-if="prefix" class="prefix">
             <i :class="prefix"></i>
         </div>
@@ -42,6 +44,9 @@ export default {
         };
     },
     methods: {
+        ComponentClick(event){
+            this.$emit("click", event);
+        },
         InputFocus() {
             this.activated = true;
         },
@@ -88,6 +93,7 @@ input {
     color: #515a6e;
     border: none;
     padding: 4px;
+    font-size: 14px;
 }
 
 .activated {
@@ -105,6 +111,7 @@ input {
     align-items: center;
     justify-content: center;
     color: #2d8cf0;
+    font-size: 16px;
 }
 
 .suffix {
@@ -117,6 +124,7 @@ input {
     align-items: center;
     justify-content: center;
     color: #2d8cf0;
+    font-size: 16px;
 }
 
 </style>

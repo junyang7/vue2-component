@@ -3,6 +3,7 @@ import Button from "./Button";
 import Checkbox from "./Checkbox";
 import CheckboxOption from "./CheckboxOption";
 import Copy from "./Copy";
+import Datetime from "./Datetime";
 import Input from "./Input";
 import Loading from "./Loading";
 import Menu from "./Menu";
@@ -21,6 +22,7 @@ const component_list = [
     Checkbox,
     CheckboxOption,
     Copy,
+    Datetime,
     Input,
     Loading,
     Menu,
@@ -50,6 +52,7 @@ export {
     Checkbox,
     CheckboxOption,
     Copy,
+    Datetime,
     Input,
     Loading,
     Menu,

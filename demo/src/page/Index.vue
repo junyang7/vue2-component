@@ -36,6 +36,10 @@ export default {
                     url: "/copy",
                 },
                 {
+                    label: "时间",
+                    url: "/datetime",
+                },
+                {
                     label: "单文本输入框",
                     url: "/input",
                 },
