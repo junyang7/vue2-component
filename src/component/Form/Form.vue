@@ -37,7 +37,7 @@
         <div
             style="display: flex; flex-wrap: wrap; column-gap: 18px; row-gap: 18px; justify-content: flex-start">
             <Button
-                @click="cancel"
+                @click="reset"
                 type="default">
                 重置
             </Button>
@@ -79,8 +79,8 @@ export default {
         init() {
             this.inner_search = this.search;
         },
-        cancel() {
-            this.$emit("cancel");
+        reset() {
+            this.$emit("reset");
         },
         confirm() {
             this.$emit("confirm");
