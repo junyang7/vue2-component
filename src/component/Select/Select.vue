@@ -4,7 +4,7 @@
         <!--TODO 展示组件-->
         <div class="component-checkbox-select" @click="SelectClick">
             <div class="component-checkbox-select-label">{{ computed_option?.[option_label_name] || "" }}</div>
-            <div>
+            <div style="color: #808695; font-size: 16px;">
                 <i class="ri-arrow-down-s-line"></i>
             </div>
         </div>
