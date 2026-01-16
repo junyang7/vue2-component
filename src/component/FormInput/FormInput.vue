@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; width: 300px">
 
         <!--文案-->
         <div
@@ -9,6 +9,7 @@
 
         <!--组件-->
         <Input
+            style="width: 200px"
             v-model="innerValue"
             :placeholder="placeholder"></Input>
 
@@ -48,7 +49,7 @@ export default {
 <style scoped>
 .label {
     height: 36px;
-    width: 100px;
+    min-width: 100px;
     display: flex;
     align-items: center;
     font-size: 14px;

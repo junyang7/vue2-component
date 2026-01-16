@@ -118,7 +118,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2d8cf0;
+    /*color: #2d8cf0;*/
+    color: #515a6e;
     font-size: 16px;
 }
 
@@ -131,7 +132,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2d8cf0;
+    /*color: #2d8cf0;*/
+    color: #515a6e;
     font-size: 16px;
 }
 

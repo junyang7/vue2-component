@@ -1,12 +1,18 @@
 <template>
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; width: 510px">
+
+        <!--文案-->
         <div class="label">
             {{ label }}
         </div>
+
+        <!--组件-->
         <DatetimeSE
+            style="width: 410px"
             v-model="innerValue"
             :placeholder="placeholder"
             :type="type"></DatetimeSE>
+
     </div>
 </template>
 

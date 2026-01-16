@@ -1,11 +1,15 @@
 <template>
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; width: 300px">
+
+        <!--文案-->
         <div
             class="label">
             {{ label }}
         </div>
+
+        <!--组件-->
         <Select
-            style="width: 200px;"
+            style="width: 200px"
             :option_list="option_list"
             :placeholder="placeholder"
             v-model="innerValue"></Select>

@@ -8,7 +8,7 @@
                 :type="type"></Datetime>
         </div>
         <div
-            style="height: 36px; width: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px;">
+            style="height: 36px; width: 10px; display: flex; align-items: center; justify-content: center; font-size: 14px;">
             -
         </div>
         <div
