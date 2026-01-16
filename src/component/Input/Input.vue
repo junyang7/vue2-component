@@ -2,18 +2,25 @@
     <div
         @click="ComponentClick"
         :class="`component ${activated ? 'activated' : ''}`">
+
+        <!--前缀-->
         <div v-if="prefix" class="prefix">
             <i :class="prefix"></i>
         </div>
+
+        <!--输入框-->
         <input
             @focus="InputFocus"
             @blur="InputBlur"
             ref="input"
             v-model="computed_value"
             :placeholder="placeholder"/>
+
+        <!--后缀-->
         <div v-if="suffix" class="suffix">
             <i :class="suffix"></i>
         </div>
+
     </div>
 </template>
 
@@ -44,7 +51,7 @@ export default {
         };
     },
     methods: {
-        ComponentClick(event){
+        ComponentClick(event) {
             this.$emit("click", event);
         },
         InputFocus() {
@@ -79,6 +86,7 @@ export default {
     color: #515a6e;
     border: 1px solid #dcdee2;
     border-radius: 2px;
+    box-sizing: border-box;
 }
 
 input {

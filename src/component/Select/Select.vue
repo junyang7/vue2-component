@@ -1,11 +1,15 @@
 <template>
     <div class="component-checkbox" ref="component-checkbox">
+
+        <!--TODO 展示组件-->
         <div class="component-checkbox-select" @click="SelectClick">
             <div class="component-checkbox-select-label">{{ computed_option?.[option_label_name] || "" }}</div>
             <div>
                 <i class="ri-arrow-down-s-line"></i>
             </div>
         </div>
+
+        <!--组件：选项-->
         <div v-if="show_option_list" class="component-checkbox-option-list">
             <slot>
                 <SelectOption
@@ -16,6 +20,7 @@
                     :label="a[option_label_name]"></SelectOption>
             </slot>
         </div>
+
     </div>
 </template>
 
@@ -114,6 +119,7 @@ export default {
     display: inline-block;
     color: #515a6e;
     /*min-width: 108px;*/
+    height: 36px;
 }
 
 .component-checkbox-select {
@@ -122,6 +128,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding-right: 8px;
+    height: 36px;
+    box-sizing: border-box;
 }
 
 .component-checkbox-select-label {

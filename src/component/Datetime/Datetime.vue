@@ -5,17 +5,17 @@
         <Input
             @click="DatetimeClick"
             v-if="type === 'date'"
-            v-model="calendar.formatted_Ymd"
+            v-model="innerValue"
             suffix="ri-calendar-line"></Input>
         <Input
             @click="DatetimeClick"
             v-else-if="type === 'time'"
-            v-model="calendar.formatted_His"
+            v-model="innerValue"
             suffix="ri-time-line"></Input>
         <Input
             @click="DatetimeClick"
             v-else
-            v-model="calendar.formatted_YmdHis"
+            v-model="innerValue"
             suffix="ri-calendar-schedule-line"></Input>
         <div
             v-if="show_calendar"
@@ -288,17 +288,6 @@ export default {
                 date = new Date();
             }
             this.buildCalendarByDate(date);
-            switch (this.type) {
-                case "date":
-                    this.$emit("input", `${this.calendar.formatted_Ymd}`);
-                    break
-                case "time":
-                    this.$emit("input", `${this.calendar.formatted_His}`);
-                    break;
-                default:
-                    this.$emit("input", `${this.calendar.formatted_Ymd} ${this.calendar.formatted_His}`);
-                    break;
-            }
         },
         buildCalendarByDate(date) {
 
@@ -463,6 +452,16 @@ export default {
             },
             immediate: true,
         }
+    },
+    computed: {
+        innerValue: {
+            get() {
+                return this.value;
+            },
+            set(v) {
+                this.$emit("input", v);
+            }
+        },
     },
 }
 </script>

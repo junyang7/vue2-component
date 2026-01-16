@@ -40,6 +40,10 @@ export default {
                     url: "/datetime",
                 },
                 {
+                    label: "表单",
+                    url: "/form",
+                },
+                {
                     label: "单文本输入框",
                     url: "/input",
                 },

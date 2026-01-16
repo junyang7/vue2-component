@@ -4,6 +4,12 @@ import Checkbox from "./Checkbox";
 import CheckboxOption from "./CheckboxOption";
 import Copy from "./Copy";
 import Datetime from "./Datetime";
+import DatetimeSE from "./DatetimeSE";
+import Form from "./Form";
+import FormDatetime from "./FormDatetime";
+import FormDatetimeSE from "./FormDatetimeSE";
+import FormInput from "./FormInput";
+import FormSelect from "./FormSelect";
 import Input from "./Input";
 import Loading from "./Loading";
 import Menu from "./Menu";
@@ -23,6 +29,12 @@ const component_list = [
     CheckboxOption,
     Copy,
     Datetime,
+    DatetimeSE,
+    Form,
+    FormDatetime,
+    FormDatetimeSE,
+    FormInput,
+    FormSelect,
     Input,
     Loading,
     Menu,
@@ -53,6 +65,12 @@ export {
     CheckboxOption,
     Copy,
     Datetime,
+    DatetimeSE,
+    Form,
+    FormDatetime,
+    FormDatetimeSE,
+    FormInput,
+    FormSelect,
     Input,
     Loading,
     Menu,
