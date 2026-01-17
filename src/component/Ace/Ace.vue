@@ -45,7 +45,7 @@ export default {
     data() {
         return {
             editor: null,
-            editor_id: "ace-" + crypto.randomUUID(),
+            editor_id: "ace-" + jc._Uuid.get(),
             default_option: {
                 theme: "ace/theme/xcode",
                 mode: "ace/mode/nginx",
