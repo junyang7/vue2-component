@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+ace-builds@^1.43.5:
+  version "1.43.5"
+  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.43.5.tgz#2099eee8caade0cd1ee4ce3e0d2c6fb2cd7e8619"
+  integrity sha512-iH5FLBKdB7SVn9GR37UgA/tpQS8OTWIxWAuq3Ofaw+Qbc69FfPXsXd9jeW7KRG2xKpKMqBDnu0tHBrCWY5QI7A==
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"

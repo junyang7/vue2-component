@@ -13,6 +13,7 @@ const routes = [
         path: "/",
         component: () => import("@/page/Index.vue"),
         children: [
+            {path: "/ace", component: () => import("@/page/TestAce"),},
             {path: "/avatar", component: () => import("@/page/TestAvatar"),},
             {path: "/button", component: () => import("@/page/TestButton"),},
             {path: "/checkbox", component: () => import("@/page/TestCheckbox"),},

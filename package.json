@@ -1,8 +1,9 @@
 {
     "name": "vue2-component",
-    "version": "0.0.1+20260116221123",
+    "version": "0.0.1+20260117232302",
     "main": "src/index.js",
     "dependencies": {
+        "ace-builds": "^1.43.5",
         "axios": "^1.9.0",
         "crypto-js": "^4.2.0",
         "js-common": "https://github.com/junyang7/js-common",

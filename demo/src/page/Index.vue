@@ -20,6 +20,10 @@ export default {
         return {
             component_list: [
                 {
+                    label: "代码编辑器：Ace",
+                    url: "/ace",
+                },
+                {
                     label: "头像",
                     url: "/avatar",
                 },

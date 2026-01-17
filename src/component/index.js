@@ -1,3 +1,4 @@
+import Ace from "./Ace";
 import Avatar from "./Avatar";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
@@ -23,6 +24,7 @@ import Tag from "./Tag";
 import Tree from "./Tree";
 
 const component_list = [
+    Ace,
     Avatar,
     Button,
     Checkbox,
@@ -59,6 +61,7 @@ const install = function (v) {
 export default {install};
 
 export {
+    Ace,
     Avatar,
     Button,
     Checkbox,
