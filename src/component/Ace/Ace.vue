@@ -64,6 +64,13 @@ export default {
         this.init()
     },
     methods: {
+        autoHeight(){
+            const lines = this.editor.session.getLength();
+            const lineHeight = this.editor.renderer.lineHeight;
+            const height = lines * lineHeight;
+            this.editor.container.style.height = `${height}px`;
+            this.editor.resize();
+        },
         async init() {
             const language_tools = ace.require("ace/ext/language_tools");
             language_tools.addCompleter({
@@ -84,11 +91,6 @@ export default {
                     callback(null, list);
                 }
             });
-
-
-
-
-
             this.editor = ace.edit(this.editor_id);
             this.editor.setOptions({
                 ...this.computed_option,
@@ -97,6 +99,9 @@ export default {
             });
             this.editor.on("change", () => {
                 this.$emit("input", this.editor.getValue());
+                if (this.computed_option?.autoHeight) {
+                    this.autoHeight();
+                }
             });
             this.editor.setValue(this.value, -1);
         },
