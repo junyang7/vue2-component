@@ -67,7 +67,7 @@ export default {
         autoHeight(){
             const lines = this.editor.session.getLength();
             const lineHeight = this.editor.renderer.lineHeight;
-            const height = lines * lineHeight;
+            const height = (lines + 1) * lineHeight;
             this.editor.container.style.height = `${height}px`;
             this.editor.resize();
         },

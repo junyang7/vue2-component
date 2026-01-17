@@ -22,7 +22,7 @@ export default {
         return {
             data1: {
                 option: {
-                    autoHeight: false
+                    autoHeight: true
                 },
                 value: `user       www www;  ## Default: nobody
 worker_processes  5;  ## Default: 1
