@@ -34,7 +34,7 @@ export default {
             default: "",
         },
         option: {
-            type: String,
+            type: Object,
             default() {
                 return {
                     label: {},
