@@ -1,16 +1,17 @@
 <template>
-    <div style="display: flex; align-items: center; width: 300px">
+    <div style="display: flex; align-items: center;">
 
         <!--文案-->
         <div
+            :style="computed_option.label.style"
             class="label">
             {{ label }}
         </div>
 
         <!--组件-->
         <Input
-            style="width: 200px"
-            v-model="innerValue"
+            :style="computed_option.input.style"
+            v-model="computed_value"
             :placeholder="placeholder"></Input>
 
     </div>
@@ -32,15 +33,51 @@ export default {
             type: String,
             default: "",
         },
+        option: {
+            type: String,
+            default() {
+                return {
+                    label: {},
+                    input: {},
+                };
+            },
+        },
+    },
+    data() {
+        return {
+            default_option: {
+                label: {
+                    style: {
+                        width: "100px",
+                        height: "36px",
+                        fontSize: "14px",
+                        color: "#515a6e",
+                    },
+                },
+                input: {
+                    style: {
+                        width: "200px",
+                        height: "36px",
+                        fontSize: "14px",
+                        color: "#515a6e",
+                    },
+                },
+            },
+        };
     },
     computed: {
-        innerValue: {
+        computed_value: {
             get() {
                 return this.value;
             },
             set(v) {
                 this.$emit("input", v);
-            }
+            },
+        },
+        computed_option: {
+            get() {
+                return jc._Object.merge(this.option, this.default_option);
+            },
         }
     },
 }
@@ -48,12 +85,8 @@ export default {
 
 <style scoped>
 .label {
-    height: 36px;
-    min-width: 100px;
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: #515a6e;
     box-sizing: border-box;
 }
 </style>
