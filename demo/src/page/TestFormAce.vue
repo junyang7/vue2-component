@@ -29,6 +29,9 @@ export default {
                         style: {
                             width: '500px',
                         },
+                        option: {
+                            autoHeight: true,
+                        },
                     },
                 },
             },

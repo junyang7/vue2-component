@@ -50,13 +50,10 @@ export default {
                 ace: {
                     style: {
                         width: "480px",
-                        height: "360px",
                         fontSize: "14px",
                         color: "#515a6e",
                     },
-                    option: {
-                        autoHeight: true,
-                    },
+                    option: {},
                 },
             },
         };
