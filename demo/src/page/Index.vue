@@ -48,6 +48,10 @@ export default {
                     url: "/form",
                 },
                 {
+                    label: "TestFormInput",
+                    url: "/TestFormInput",
+                },
+                {
                     label: "单文本输入框",
                     url: "/input",
                 },

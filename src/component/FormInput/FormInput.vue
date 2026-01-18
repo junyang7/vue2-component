@@ -76,7 +76,7 @@ export default {
         },
         computed_option: {
             get() {
-                return jc._Object.merge(this.option, this.default_option);
+                return jc._Object.merge(this.default_option, this.option);
             },
         }
     },

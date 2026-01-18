@@ -20,6 +20,7 @@ const routes = [
             {path: "/copy", component: () => import("@/page/TestCopy"),},
             {path: "/datetime", component: () => import("@/page/TestDatetime.vue"),},
             {path: "/form", component: () => import("@/page/TestForm.vue"),},
+            {path: "/TestFormInput", component: () => import("@/page/TestFormInput.vue"),},
             {path: "/input", component: () => import("@/page/TestInput"),},
             {path: "/loading", component: () => import("@/page/TestLoading"),},
             {path: "/menu", component: () => import("@/page/TestMenu.vue"),},
