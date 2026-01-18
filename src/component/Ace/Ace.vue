@@ -152,5 +152,6 @@ export default {
     border-radius: 2px;
     min-height: 36px;
     height: 100%;
+    z-index: 0;
 }
 </style>
