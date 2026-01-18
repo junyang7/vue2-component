@@ -71,18 +71,22 @@ export default {
 .size-small {
     padding: 2px 5px;
     font-size: 12px;
+    line-height: normal;
+    height: auto;
 }
 
 .size-default {
     padding: 0 16px;
     height: 36px;
     font-size: 14px;
+    line-height: normal;
 }
 
 .size-large {
     padding: 0 12px;
     height: 52px;
     font-size: 32px;
+    line-height: normal;
 }
 
 .type-default {
