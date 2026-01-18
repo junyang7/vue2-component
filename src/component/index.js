@@ -7,6 +7,7 @@ import Copy from "./Copy";
 import Datetime from "./Datetime";
 import DatetimeSE from "./DatetimeSE";
 import Form from "./Form";
+import FormAce from "./FormAce";
 import FormDatetime from "./FormDatetime";
 import FormDatetimeSE from "./FormDatetimeSE";
 import FormInput from "./FormInput";
@@ -33,6 +34,7 @@ const component_list = [
     Datetime,
     DatetimeSE,
     Form,
+    FormAce,
     FormDatetime,
     FormDatetimeSE,
     FormInput,
@@ -70,6 +72,7 @@ export {
     Datetime,
     DatetimeSE,
     Form,
+    FormAce,
     FormDatetime,
     FormDatetimeSE,
     FormInput,

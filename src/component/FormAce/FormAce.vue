@@ -9,17 +9,17 @@
         </div>
 
         <!--组件-->
-        <Input
-            :style="computed_setting.input.style"
-            :placeholder="placeholder"
-            v-model="computed_value"></Input>
+        <Ace
+            :option="computed_setting.ace.option"
+            :style="computed_setting.ace.style"
+            v-model="computed_value"></Ace>
 
     </div>
 </template>
 
 <script>
 export default {
-    name: "FormInput",
+    name: "FormAce",
     props: {
         label: {
             type: String,
@@ -27,10 +27,6 @@ export default {
         },
         value: {
             type: [String, Number,],
-            default: "",
-        },
-        placeholder: {
-            type: String,
             default: "",
         },
         setting: {
@@ -51,12 +47,15 @@ export default {
                         color: "#515a6e",
                     },
                 },
-                input: {
+                ace: {
                     style: {
-                        width: "200px",
-                        height: "36px",
+                        width: "480px",
+                        height: "360px",
                         fontSize: "14px",
                         color: "#515a6e",
+                    },
+                    option: {
+                        autoHeight: true,
                     },
                 },
             },

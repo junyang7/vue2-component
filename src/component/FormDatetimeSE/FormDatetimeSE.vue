@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; align-items: center; width: 510px">
+    <div style="display: flex; width: 510px">
 
         <!--文案-->
         <div class="label">

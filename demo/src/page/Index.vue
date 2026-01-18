@@ -48,6 +48,10 @@ export default {
                     url: "/form",
                 },
                 {
+                    label: "TestFormAce",
+                    url: "/TestFormAce",
+                },
+                {
                     label: "TestFormInput",
                     url: "/TestFormInput",
                 },

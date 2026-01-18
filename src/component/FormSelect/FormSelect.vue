@@ -1,5 +1,5 @@
 <template>
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex;">
 
         <!--文案-->
         <div
@@ -46,10 +46,7 @@ export default {
         setting: {
             type: Object,
             default() {
-                return {
-                    label: {},
-                    input: {},
-                };
+                return {};
             },
         },
     },
