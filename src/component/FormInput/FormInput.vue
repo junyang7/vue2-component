@@ -3,16 +3,16 @@
 
         <!--文案-->
         <div
-            :style="computed_option.label.style"
+            :style="computed_setting.label.style"
             class="label">
             {{ label }}
         </div>
 
         <!--组件-->
         <Input
-            :style="computed_option.input.style"
-            v-model="computed_value"
-            :placeholder="placeholder"></Input>
+            :style="computed_setting.input.style"
+            :placeholder="placeholder"
+            v-model="computed_value"></Input>
 
     </div>
 </template>
@@ -33,7 +33,7 @@ export default {
             type: String,
             default: "",
         },
-        option: {
+        setting: {
             type: Object,
             default() {
                 return {
@@ -45,7 +45,7 @@ export default {
     },
     data() {
         return {
-            default_option: {
+            default_setting: {
                 label: {
                     style: {
                         width: "100px",
@@ -74,11 +74,11 @@ export default {
                 this.$emit("input", v);
             },
         },
-        computed_option: {
+        computed_setting: {
             get() {
-                return jc._Object.merge(this.default_option, this.option);
+                return jc._Object.merge(this.default_setting, this.setting);
             },
-        }
+        },
     },
 }
 </script>

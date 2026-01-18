@@ -6,7 +6,7 @@
             <div style="display: flex; align-items: center; justify-content: flex-start; column-gap: 9px;">
 
                 <FormInput
-                    :option="data1.option"
+                    :setting="data1.setting"
                     :label="data1.label"
                     v-model="data1.value"></FormInput>
 
@@ -24,7 +24,7 @@ export default {
             data1: {
                 label: "文案",
                 value: "",
-                option: {
+                setting: {
                     input: {
                         style: {
                             width: '500px',
