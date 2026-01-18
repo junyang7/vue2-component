@@ -69,8 +69,7 @@ export default {
 }
 
 .size-small {
-    padding: 0 8px;
-    height: 20px;
+    padding: 2px 5px;
     font-size: 12px;
 }
 

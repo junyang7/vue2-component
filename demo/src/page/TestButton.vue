@@ -24,6 +24,16 @@
             </div>
         </div>
 
+        <div style="margin-bottom: 36px;">
+            <div>size</div>
+            <div style="display: flex; align-items: center; justify-content: flex-start; column-gap: 9px;">
+                <Button size="small" type="success">添加模式</Button>
+                <Button size="small" type="success">添加</Button>
+                <Button size="default">default</Button>
+                <Button size="large">large</Button>
+            </div>
+        </div>
+
     </div>
 </template>
 
