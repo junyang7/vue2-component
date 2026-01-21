@@ -1,6 +1,6 @@
 {
     "name": "vue2-component",
-    "version": "0.0.1+20260121200958",
+    "version": "0.0.1+20260121213027",
     "main": "src/index.js",
     "dependencies": {
         "ace-builds": "^1.43.5",

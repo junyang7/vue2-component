@@ -11,6 +11,7 @@ import FormAce from "./FormAce";
 import FormDatetime from "./FormDatetime";
 import FormDatetimeSE from "./FormDatetimeSE";
 import FormInput from "./FormInput";
+import FormRadio from "./FormRadio";
 import FormSelect from "./FormSelect";
 import Input from "./Input";
 import Loading from "./Loading";
@@ -38,6 +39,7 @@ const component_list = [
     FormDatetime,
     FormDatetimeSE,
     FormInput,
+    FormRadio,
     FormSelect,
     Input,
     Loading,
@@ -76,6 +78,7 @@ export {
     FormDatetime,
     FormDatetimeSE,
     FormInput,
+    FormRadio,
     FormSelect,
     Input,
     Loading,
