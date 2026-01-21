@@ -1,7 +1,7 @@
 <template>
     <div
         @click="ComponentClick"
-        :class="`component ${activated ? 'activated' : ''}`">
+        :class="`component ${activated ? 'activated' : ''} ${disabled ? 'disabled' : ''}`">
 
         <!--前缀-->
         <div v-if="prefix" class="prefix">
@@ -14,7 +14,8 @@
             @blur="InputBlur"
             ref="input"
             v-model="computed_value"
-            :placeholder="placeholder"/>
+            :placeholder="placeholder"
+            :disabled="disabled"/>
 
         <!--后缀-->
         <div v-if="suffix" class="suffix">
@@ -36,6 +37,10 @@ export default {
             type: String,
             default: "",
         },
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
         prefix: {
             type: String,
             default: "",
@@ -52,16 +57,19 @@ export default {
     },
     methods: {
         ComponentClick(event) {
+            if (this.disabled) {
+                return;
+            }
             this.$emit("click", event);
         },
         InputFocus() {
+            if (this.disabled) {
+                return;
+            }
             this.activated = true;
         },
         InputBlur() {
             this.activated = false;
-        },
-        focus() {
-            this.InputFocus();
         },
     },
     computed: {
@@ -107,6 +115,17 @@ input {
 .activated {
     border-color: #57a3f3;
     box-shadow: 0 0 4px 2px rgba(45, 140, 240, 0.5);
+}
+
+.disabled {
+    background-color: #f5f7fa;
+    color: #c5c8ce;
+    cursor: not-allowed;
+}
+
+.disabled input {
+    background-color: #f5f7fa;
+    cursor: not-allowed;
 }
 
 .prefix {

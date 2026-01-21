@@ -12,6 +12,7 @@
         <Input
             :style="computed_setting.input.style"
             :placeholder="placeholder"
+            :disabled="disabled"
             v-model="computed_value"></Input>
 
     </div>
@@ -32,6 +33,10 @@ export default {
         placeholder: {
             type: String,
             default: "",
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
         },
         setting: {
             type: Object,
