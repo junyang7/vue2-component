@@ -7,12 +7,14 @@
 
                 <FormInput
                     v-if="a.type === 'input'"
+                    :disabled="a.disabled"
                     :placeholder="a.placeholder"
                     :label="a.label"
                     v-model="a.value"></FormInput>
 
                 <FormSelect
                     v-if="a.type === 'select'"
+                    :disabled="a.disabled"
                     :placeholder="a.placeholder"
                     :option_list="a.option_list"
                     :label="a.label"
@@ -20,12 +22,14 @@
 
                 <FormDatetime
                     v-if="a.type === 'datetime'"
+                    :disabled="a.disabled"
                     :label="a.label"
                     :placeholder="a.placeholder"
                     v-model="a.value"></FormDatetime>
 
                 <FormDatetimeSE
                     v-if="a.type === 'datetime_se'"
+                    :disabled="a.disabled"
                     :label="a.label"
                     :placeholder="a.placeholder"
                     v-model="a.value"></FormDatetimeSE>
