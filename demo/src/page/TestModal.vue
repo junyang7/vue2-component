@@ -114,7 +114,7 @@
                 type="error">事件（标签）
             </Button>
             <Modal
-                @ok="ok"
+                @confirm="confirm"
                 @cancel="cancel"
                 type="error"
                 v-model="show_event_element">
@@ -136,15 +136,15 @@
 
         <div style="margin-bottom: 36px;">
             <Button
-                @click="ButtonClickCustomOk"
+                @click="ButtonClickCustomConfirm"
                 size="default"
                 type="error">自定义确定按钮
             </Button>
             <Modal
-                @ok="okCustom"
+                @confirm="confirmCustom"
                 type="error"
-                v-model="show_custom_ok">
-                <div slot="ok">
+                v-model="show_custom_confirm">
+                <div slot="confirm">
                     <Button
                         type="info">我知道了</Button>
                 </div>
@@ -168,7 +168,7 @@ export default {
             show_event_service: false,
             show_event_element: false,
             show_hide_cancel: false,
-            show_custom_ok: false,
+            show_custom_confirm: false,
         };
     },
     methods: {
@@ -201,8 +201,8 @@ export default {
         },
         ButtonClickEventService() {
             this.$Modal.warning({
-                ok: () => {
-                    console.log("ok");
+                confirm: () => {
+                    console.log("confirm");
                 },
                 cancel: () => {
                     console.log("cancel");
@@ -212,8 +212,8 @@ export default {
         ButtonClickEventElement() {
             this.show_event_element = true;
         },
-        ok() {
-            console.log("ok");
+        confirm() {
+            console.log("confirm");
         },
         cancel() {
             console.log("cancel");
@@ -221,11 +221,11 @@ export default {
         ButtonClickHideCancel() {
             this.show_hide_cancel = true;
         },
-        ButtonClickCustomOk(){
-            this.show_custom_ok = true;
+        ButtonClickCustomConfirm(){
+            this.show_custom_confirm = true;
         },
-        okCustom(){
-            console.log("okCustom")
+        confirmCustom(){
+            console.log("confirmCustom")
         },
     },
 }

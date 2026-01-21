@@ -33,8 +33,8 @@
                         <Button>取消</Button>
                     </slot>
                 </div>
-                <div @click="ok">
-                    <slot name="ok">
+                <div @click="confirm">
+                    <slot name="confirm">
                         <Button type="primary">确定</Button>
                     </slot>
                 </div>
@@ -78,7 +78,7 @@ export default {
             inner_title: "标题",
             inner_content: "内容",
             inner_cancel: null,
-            inner_ok: null,
+            inner_confirm: null,
         };
     },
     watch: {
@@ -123,17 +123,17 @@ export default {
             } else {
                 this.inner_content = this.content;
             }
-            if (option.hasOwnProperty("ok") && typeof option.ok === "function") {
-                this.inner_ok = option.ok;
+            if (option.hasOwnProperty("confirm") && typeof option.confirm === "function") {
+                this.inner_confirm = option.confirm;
             }
             if (option.hasOwnProperty("cancel") && typeof option.cancel === "function") {
                 this.inner_cancel = option.cancel;
             }
         },
-        ok() {
-            this.$emit("ok");
-            if (this.inner_ok) {
-                this.inner_ok();
+        confirm() {
+            this.$emit("confirm");
+            if (this.inner_confirm) {
+                this.inner_confirm();
             }
             this.close();
         },
