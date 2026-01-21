@@ -67,7 +67,6 @@ export default {
                 radio: {
                     style: {
                         width: "200px",
-                        height: "36px",
                         fontSize: "14px",
                         color: "#515a6e",
                     },
