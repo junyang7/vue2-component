@@ -69,10 +69,11 @@ export default {
 }
 
 .size-small {
-    padding: 2px 5px;
+    /*padding: 2px 5px;*/
     font-size: 12px;
     line-height: normal;
-    height: auto;
+    height: 22px;
+    padding: 0 4px;
 }
 
 .size-default {
