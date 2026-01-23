@@ -75,6 +75,16 @@
             </Select>
         </div>
 
+        <div style="margin-bottom: 36px;">
+            <div>默认</div>
+            <Select
+                style="width: 600px;"
+                :option_list="test5.option_list"
+                :placeholder="test5.placeholder"
+                :disabled="test5.disabled"
+                v-model="test5.value"></Select>
+        </div>
+
     </div>
 </template>
 
@@ -206,6 +216,7 @@ export default {
             test5: {
                 placeholder: "请选择",
                 value: 0,
+                disabled: true,
                 option_list: [
                     {
                         label: "5全部",

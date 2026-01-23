@@ -1,10 +1,20 @@
 <template>
-    <div class="component-checkbox" ref="component-checkbox">
+    <div
+        class="component-checkbox"
+        :class="{
+            disabled: disabled,
+        }"
+        ref="component-checkbox">
 
         <!--TODO 展示组件-->
         <div class="component-checkbox-select" @click="SelectClick">
             <div class="component-checkbox-select-label">{{ computed_option?.[option_label_name] || "" }}</div>
-            <div style="color: #808695; font-size: 16px;">
+            <div
+                class="default"
+                :class="{
+                    disabled: disabled,
+                }"
+                style="font-size: 16px; background-color: transparent">
                 <i class="ri-arrow-down-s-line"></i>
             </div>
         </div>
@@ -34,6 +44,10 @@ export default {
         value: {
             type: null,
             default: null,
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
         },
         placeholder: {
             type: String,
@@ -66,13 +80,22 @@ export default {
     },
     methods: {
         SelectClick() {
+            if (this.disabled) {
+                return;
+            }
             this.show_option_list = true;
         },
         SelectOptionClick(value) {
+            if (this.disabled) {
+                return;
+            }
             this.$emit("input", value);
             this.show_option_list = false;
         },
         DocumentEventMousedown(event) {
+            if (this.disabled) {
+                return;
+            }
             const component = this.$refs["component-checkbox"];
             if (component && !component.contains(event.target)) {
                 this.show_option_list = false;
@@ -148,5 +171,15 @@ export default {
     word-break: keep-all;
     white-space: nowrap;
     z-index: 1;
+}
+
+.default {
+    color: #808695;
+}
+
+.disabled {
+    background-color: #f5f7fa;
+    color: #c5c8ce;
+    cursor: not-allowed;
 }
 </style>

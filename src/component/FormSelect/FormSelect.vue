@@ -13,6 +13,7 @@
             :style="computed_setting.select.style"
             :option_list="option_list"
             :placeholder="placeholder"
+            :disabled="disabled"
             v-model="computed_value"></Select>
 
     </div>
@@ -29,6 +30,10 @@ export default {
         value: {
             type: [String, Number,],
             default: "",
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
         },
         placeholder: {
             type: String,
