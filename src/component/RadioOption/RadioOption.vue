@@ -1,21 +1,33 @@
 <template>
     <div
         class="component"
+        :class="{
+            disabled: disabled,
+        }"
         @click="RadioOptionClick">
         <slot>
             <template v-if="activated">
                 <div
-                    class="prefix activated">
+                    class="prefix activated"
+                    :class="{
+                        disabled: disabled,
+                    }">
                     <i class="ri-radio-button-line"></i>
                 </div>
             </template>
             <template v-else>
                 <div
-                    class="prefix default">
+                    class="prefix default"
+                    :class="{
+                        disabled: disabled,
+                    }">
                     <i class="ri-checkbox-blank-circle-line"></i>
                 </div>
             </template>
-            <div>{{ label }}</div>
+            <div
+                :class="{
+                    disabled: disabled,
+                }">{{ label }}</div>
         </slot>
     </div>
 </template>
@@ -33,6 +45,10 @@ export default {
             type: null,
             default: null,
         },
+        disabled: {
+            type: Boolean,
+            default: false,
+        },
         activated: {
             type: Boolean,
             default: false,
@@ -40,6 +56,9 @@ export default {
     },
     methods: {
         RadioOptionClick() {
+            if (this.disabled) {
+                return;
+            }
             if (this.context) {
                 this.context.RadioOptionClick(this.value);
             }
@@ -66,5 +85,11 @@ export default {
 
 .activated {
     color: #2b85e4;
+}
+
+.disabled {
+    /*background-color: #f5f7fa;*/
+    color: #c5c8ce;
+    cursor: not-allowed;
 }
 </style>

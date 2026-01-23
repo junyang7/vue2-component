@@ -13,6 +13,7 @@
             :style="computed_setting.radio.style"
             :option_list="option_list"
             :placeholder="placeholder"
+            :disabled="disabled"
             v-model="computed_value"></Radio>
 
     </div>
@@ -32,6 +33,10 @@ export default {
         value: {
             type: [String, Number,],
             default: "",
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
         },
         placeholder: {
             type: String,

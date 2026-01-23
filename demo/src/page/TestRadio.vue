@@ -78,6 +78,14 @@
                 v-model="data5.value"></Radio>
         </div>
 
+        <div style="margin-bottom: 36px;">
+            <div>默认</div>
+            <Radio
+                :disabled="data6.disabled"
+                :option_list="data6.option_list"
+                v-model="data6.value"></Radio>
+        </div>
+
     </div>
 </template>
 
@@ -207,6 +215,37 @@ export default {
                 ],
             },
             data5: {
+                placeholder: "请选择",
+                value: 0,
+                option_list: [
+                    {
+                        label: "全部",
+                        value: 0,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "苹果",
+                        value: 1,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "橘子",
+                        value: 2,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                    {
+                        label: "香蕉",
+                        value: 3,
+                        prefix: "ri-apple-line",
+                        suffix: "",
+                    },
+                ],
+            },
+            data6: {
+                disabled: true,
                 placeholder: "请选择",
                 value: 0,
                 option_list: [

@@ -7,6 +7,7 @@
                 v-for="(a,b,c) in option_list"
                 :key="a[option_value_name]"
                 :activated="value === a[option_value_name]"
+                :disabled="disabled"
                 :value="a[option_value_name]"
                 :label="a[option_label_name]"></RadioOption>
         </slot>
@@ -23,6 +24,10 @@ export default {
         value: {
             type: null,
             default: null,
+        },
+        disabled: {
+            type: Boolean,
+            default: false,
         },
         option_list: {
             type: Array,
@@ -46,6 +51,9 @@ export default {
     },
     methods: {
         RadioOptionClick(value) {
+            if (this.disabled) {
+                return;
+            }
             this.$emit("input", value);
         },
     },
