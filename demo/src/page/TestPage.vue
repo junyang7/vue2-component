@@ -3,7 +3,7 @@
 
         <div style="margin-bottom: 36px;">
             <div>size</div>
-            <div style="width: 300px;">
+            <div style="width: 300px; border: 1px solid red; display: flex; justify-content: flex-end; overflow: auto">
                 <Page
                     @click="click"
                     :total="data1.total"

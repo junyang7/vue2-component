@@ -132,9 +132,8 @@ export default {
 
 <style scoped>
 .page {
-    display: flex;
+    display: inline-flex;
     column-gap: 9px;
-    width: 100%;
 }
 
 .button {
