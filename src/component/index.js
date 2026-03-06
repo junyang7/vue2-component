@@ -18,6 +18,7 @@ import Loading from "./Loading";
 import Menu from "./Menu";
 import Message from "./Message";
 import Modal from "./Modal";
+import Page from "./Page";
 import Radio from "./Radio";
 import RadioOption from "./RadioOption";
 import Select from "./Select";
@@ -46,6 +47,7 @@ const component_list = [
     Menu,
     Message,
     Modal,
+    Page,
     Radio,
     RadioOption,
     Select,
@@ -85,6 +87,7 @@ export {
     Menu,
     Message,
     Modal,
+    Page,
     Radio,
     RadioOption,
     Select,

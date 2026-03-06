@@ -76,6 +76,10 @@ export default {
                     url: "/modal",
                 },
                 {
+                    label: "分页",
+                    url: "/TestPage",
+                },
+                {
                     label: "单选",
                     url: "/radio",
                 },

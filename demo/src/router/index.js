@@ -27,6 +27,7 @@ const routes = [
             {path: "/menu", component: () => import("@/page/TestMenu.vue"),},
             {path: "/message", component: () => import("@/page/TestMessage"),},
             {path: "/modal", component: () => import("@/page/TestModal"),},
+            {path: "/TestPage", component: () => import("@/page/TestPage"),},
             {path: "/radio", component: () => import("@/page/TestRadio"),},
             {path: "/select", component: () => import("@/page/TestSelect"),},
             {path: "/tag", component: () => import("@/page/TestTag"),},
