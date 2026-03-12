@@ -71,6 +71,12 @@ export default {
         InputBlur() {
             this.activated = false;
         },
+        focus() {
+            if (this.disabled) {
+                return;
+            }
+            this.$refs.input.focus();
+        }
     },
     computed: {
         computed_value: {
