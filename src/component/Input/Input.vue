@@ -88,6 +88,13 @@ export default {
             }
         }
     },
+    mounted() {
+        if (this.autofocus && !this.disabled) {
+            this.$nextTick(() => {
+                this.$refs.input.focus();
+            });
+        }
+    },
 }
 </script>
 
