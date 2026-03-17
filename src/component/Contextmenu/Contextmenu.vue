@@ -17,7 +17,7 @@
                 v-else
                 class="menu">
                 <div
-                    :style="{color:a.color}"
+                    :style="{color:a.icon_color}"
                     class="icon">
                     <img
                         v-if="a.icon_img_src"

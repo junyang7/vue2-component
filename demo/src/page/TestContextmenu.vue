@@ -28,7 +28,7 @@ export default {
                             icon_img_src: "https://code.visualstudio.com/assets/favicon.ico",
                             name: "打开code-server编辑器",
                             id: 1,
-                            color: "#e8eaec",
+                            icon_color: "#e8eaec",
                         },
                         {
                             divider: false,
@@ -37,7 +37,7 @@ export default {
                             icon_img_src: "",
                             name: "删除",
                             id: 1,
-                            color: "#ed4014",
+                            icon_color: "#ed4014",
                         },
                         {
                             divider: true,
@@ -49,7 +49,7 @@ export default {
                             icon_img_src: "",
                             name: "克隆环境",
                             id: 2,
-                            color: "#2d8cf0",
+                            icon_color: "#2d8cf0",
                         },
                         {
                             divider: true,
@@ -58,7 +58,7 @@ export default {
                             icon_img_src: "",
                             name: "",
                             id: 0,
-                            color: "",
+                            icon_color: "",
                         },
                         {
                             divider: false,
@@ -67,7 +67,7 @@ export default {
                             icon_img_src: "",
                             name: "复制主机端口",
                             id: 2,
-                            color: "#808695",
+                            icon_color: "#808695",
                         },
                         {
                             divider: false,
@@ -76,7 +76,7 @@ export default {
                             icon_img_src: "",
                             name: "复制支付地址",
                             id: 2,
-                            color: "#808695",
+                            icon_color: "#808695",
                         },
                     ],
                 },
