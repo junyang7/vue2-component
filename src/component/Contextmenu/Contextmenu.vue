@@ -60,9 +60,11 @@ export default {
     },
     mounted() {
         document.addEventListener("click", this.hide);
+        document.addEventListener("contextmenu", this.hide);
     },
     beforeDestroy() {
         document.removeEventListener("click", this.hide);
+        document.removeEventListener("contextmenu", this.hide);
     },
 }
 </script>
