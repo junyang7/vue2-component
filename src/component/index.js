@@ -3,6 +3,7 @@ import Avatar from "./Avatar";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
 import CheckboxOption from "./CheckboxOption";
+import Contextmenu from "./Contextmenu";
 import Copy from "./Copy";
 import Datetime from "./Datetime";
 import DatetimeSE from "./DatetimeSE";
@@ -32,6 +33,7 @@ const component_list = [
     Button,
     Checkbox,
     CheckboxOption,
+    Contextmenu,
     Copy,
     Datetime,
     DatetimeSE,
@@ -72,6 +74,7 @@ export {
     Button,
     Checkbox,
     CheckboxOption,
+    Contextmenu,
     Copy,
     Datetime,
     DatetimeSE,

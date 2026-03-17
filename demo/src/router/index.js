@@ -17,6 +17,7 @@ const routes = [
             {path: "/avatar", component: () => import("@/page/TestAvatar"),},
             {path: "/button", component: () => import("@/page/TestButton"),},
             {path: "/checkbox", component: () => import("@/page/TestCheckbox"),},
+            {path: "/TestContextmenu", component: () => import("@/page/TestContextmenu"),},
             {path: "/copy", component: () => import("@/page/TestCopy"),},
             {path: "/datetime", component: () => import("@/page/TestDatetime.vue"),},
             {path: "/form", component: () => import("@/page/TestForm.vue"),},

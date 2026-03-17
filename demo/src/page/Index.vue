@@ -36,6 +36,10 @@ export default {
                     url: "/checkbox",
                 },
                 {
+                    label: "TestContextmenu",
+                    url: "/TestContextmenu",
+                },
+                {
                     label: "复制",
                     url: "/copy",
                 },
