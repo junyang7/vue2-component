@@ -1,15 +1,30 @@
 <template>
-    <div :style="{left: `${setting.x}px`, top: `${setting.y}px`,}" v-if="computed_value" class="contextmenu">
-        <template v-for="(a,b,c) in setting?.menu_list || []">
+    <div
+        :style="{left: `${setting.x}px`, top: `${setting.y}px`,}"
+        v-if="computed_value && setting.menu_list.length > 0"
+        class="contextmenu">
+        <template
+            v-for="(a,b,c) in setting?.menu_list || []">
 
             <!--分割线-->
-            <div v-if="a?.divider || a.divider" class="divider-y"></div>
+            <div
+                v-if="a?.divider || a.divider"
+                class="divider-y"></div>
 
             <!--选项卡-->
-            <div @click="click(a)" v-else class="menu">
-                <div :style="{color:a.color}" class="icon">
-                    <img v-if="a.icon_img_src" :src="a.icon_img_src">
-                    <i v-else-if="a.icon_class" :class="a.icon_class"></i>
+            <div
+                @click="click(a)"
+                v-else
+                class="menu">
+                <div
+                    :style="{color:a.color}"
+                    class="icon">
+                    <img
+                        v-if="a.icon_img_src"
+                        :src="a.icon_img_src">
+                    <i
+                        v-else-if="a.icon_class"
+                        :class="a.icon_class"></i>
                 </div>
                 <div class="divider-x"></div>
                 <div class="name">{{ a.name }}</div>
