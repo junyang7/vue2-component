@@ -145,5 +145,6 @@ export default {
     width: auto;
     display: flex;
     align-items: center;
+    padding-right: 6px;
 }
 </style>
