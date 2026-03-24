@@ -22,8 +22,8 @@ export default {
         return {
             data1: {
                 page: 1,
-                size: 200,
-                total: 100000,
+                size: 20,
+                total: 21,
             },
         };
     },

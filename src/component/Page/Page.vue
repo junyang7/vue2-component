@@ -2,6 +2,7 @@
     <div class="page">
         <!--首页-->
         <div
+            title="首页"
             @click="click(s)"
             class="button icon"
             v-if="curr > 1">
@@ -10,6 +11,7 @@
 
         <!--左-->
         <div
+            title="前一页"
             @click="click(prev1)"
             class="button icon"
             v-if="curr > 1">
@@ -39,18 +41,19 @@
         <div
             @click="click(next1)"
             class="button"
-            v-if="next1 < e">{{ next1 }}
+            v-if="next1 <= e">{{ next1 }}
         </div>
 
         <!--当前+2-->
         <div
             @click="click(next2)"
             class="button"
-            v-if="next2 < e">{{ next2 }}
+            v-if="next2 <= e">{{ next2 }}
         </div>
 
         <!--右-->
         <div
+            title="下一页"
             @click="click(next1)"
             class="button icon"
             v-if="curr < e">
@@ -59,6 +62,7 @@
 
         <!--尾页-->
         <div
+            title="尾页"
             @click="click(e)"
             class="button icon"
             v-if="curr < e">
