@@ -28,6 +28,10 @@ export default {
                     url: "/avatar",
                 },
                 {
+                    label: "TestBreadcrumb",
+                    url: "/TestBreadcrumb",
+                },
+                {
                     label: "按钮",
                     url: "/button",
                 },

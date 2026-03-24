@@ -1,5 +1,6 @@
 import Ace from "./Ace";
 import Avatar from "./Avatar";
+import Breadcrumb from "./Breadcrumb";
 import Button from "./Button";
 import Checkbox from "./Checkbox";
 import CheckboxOption from "./CheckboxOption";
@@ -30,6 +31,7 @@ import Tree from "./Tree";
 const component_list = [
     Ace,
     Avatar,
+    Breadcrumb,
     Button,
     Checkbox,
     CheckboxOption,
@@ -71,6 +73,7 @@ export default {install};
 export {
     Ace,
     Avatar,
+    Breadcrumb,
     Button,
     Checkbox,
     CheckboxOption,

@@ -15,6 +15,7 @@ const routes = [
         children: [
             {path: "/ace", component: () => import("@/page/TestAce"),},
             {path: "/avatar", component: () => import("@/page/TestAvatar"),},
+            {path: "/TestBreadcrumb", component: () => import("@/page/TestBreadcrumb"),},
             {path: "/button", component: () => import("@/page/TestButton"),},
             {path: "/checkbox", component: () => import("@/page/TestCheckbox"),},
             {path: "/TestContextmenu", component: () => import("@/page/TestContextmenu"),},
