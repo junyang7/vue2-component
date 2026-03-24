@@ -7,7 +7,11 @@
                 </div>
             </template>
             <div class="label">
-                <router-link :to="a.to">{{ a.label }}</router-link>
+                <router-link
+                    v-if="a.to && b !== list.length - 1"
+                    :to="a.to">{{ a.label }}
+                </router-link>
+                <span v-else>{{ a.label }}</span>
             </div>
         </template>
     </div>
@@ -38,7 +42,7 @@ export default {
 }
 
 .breadcrumb .icon {
-    width: 18px;
+    width: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
