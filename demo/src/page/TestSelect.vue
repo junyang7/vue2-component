@@ -60,6 +60,9 @@
                     :value="a.value"
                     :activated="test4.value === a.value">
                     <div style="display: flex; align-items: center; justify-content: center; height: 36px;">
+                        <div v-if="a.value === 2">
+                            <Tag type="error" size="small">我的最爱</Tag>
+                        </div>
                         <div v-if="test4.value === a.value" style="color: #ed4014;">
                             <i class="ri-checkbox-fill"></i>
                         </div>
@@ -67,9 +70,6 @@
                             <i class="ri-checkbox-blank-line"></i>
                         </div>
                         <div>{{ a.label }}</div>
-                        <div v-if="a.value === 2">
-                            <Tag type="error" size="small">我的最爱</Tag>
-                        </div>
                     </div>
                 </SelectOption>
             </Select>

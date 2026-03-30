@@ -2,11 +2,13 @@
     <div style="display: flex;">
 
         <!--文案-->
-        <div
-            :style="computed_setting.label.style"
-            class="label">
-            {{ label }}
-        </div>
+        <slot name="label">
+            <div
+                :style="computed_setting.label.style"
+                class="label">
+                {{ label }}
+            </div>
+        </slot>
 
         <!--组件-->
         <Input
