@@ -22,7 +22,7 @@ export default {
         },
         color: {
             type: String,
-            default: "#ff9900",
+            default: "#989daa",
         },
         setting: {
             type: Object,
@@ -53,7 +53,7 @@ export default {
         computedStyle: {
             get() {
                 let style = {};
-                let rgb = jc._Color.convertHexToRgb(this?.template?.color?.[this?.color] || this.color || "#f7f7f7");
+                let rgb = jc._Color.convertHexToRgb(this?.template?.color?.[this?.color] || this.color || "#989daa");
                 switch (this.type) {
                     case "border":
                         style.border = `1px solid rgba(${rgb},1)`;
@@ -70,7 +70,7 @@ export default {
                         break;
                 }
                 if (this?.color && this.color === "default") {
-                    style.color = `#515a6e`;
+                    style.color = `#989daa`;
                 }
                 if (this?.size) {
                     if (this?.template?.size?.[this?.size]) {
@@ -118,7 +118,7 @@ export default {
                 },
             },
             color: {
-                default: "#f7f7f7",
+                default: "#989daa",
                 primary: "#2d8cf0",
                 success: "#19be6b",
                 error: "#ed4014",
