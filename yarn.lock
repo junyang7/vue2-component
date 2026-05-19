@@ -161,7 +161,7 @@ hasown@^2.0.2:
 
 "js-common@https://github.com/junyang7/js-common":
   version "0.0.1"
-  resolved "https://github.com/junyang7/js-common#9f147d321c33e8117be24f646134194d38ba9a3c"
+  resolved "https://github.com/junyang7/js-common#82ba26d7fbe6099252e01b4977d2edb8bc47abf3"
   dependencies:
     axios "^1.9.0"
     crypto-js "^4.2.0"

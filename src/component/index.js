@@ -8,6 +8,7 @@ import Contextmenu from "./Contextmenu";
 import Copy from "./Copy";
 import Datetime from "./Datetime";
 import DatetimeSE from "./DatetimeSE";
+import Dropdown from "./Dropdown";
 import Form from "./Form";
 import FormAce from "./FormAce";
 import FormDatetime from "./FormDatetime";
@@ -39,6 +40,7 @@ const component_list = [
     Copy,
     Datetime,
     DatetimeSE,
+    Dropdown,
     Form,
     FormAce,
     FormDatetime,
@@ -81,6 +83,7 @@ export {
     Copy,
     Datetime,
     DatetimeSE,
+    Dropdown,
     Form,
     FormAce,
     FormDatetime,

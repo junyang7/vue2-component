@@ -25,8 +25,8 @@ export default {
         };
     },
     methods: {
-        click() {
-            this.$emit("click");
+        click(event) {
+            this.$emit("click", event);
         },
     },
     computed: {

@@ -1,9 +1,11 @@
 <template>
-    <button
-        @click="click"
-        :class="c">
+    <span
+        class="tag"
+        @mouseenter="MouseEnter"
+        @mouseleave="MouseLeave"
+        :style="computedStyle">
         <slot></slot>
-    </button>
+    </span>
 </template>
 
 <script>
@@ -16,42 +18,128 @@ export default {
         },
         type: {
             type: String,
-            default: "default",
+            default: "backgroundColor",
+        },
+        color: {
+            type: String,
+            default: "#ff9900",
+        },
+        setting: {
+            type: Object,
+            default() {
+                return {
+                    style: {
+                        default: {},
+                        hover: {},
+                    },
+                };
+            },
         },
     },
-    data(){
+    data() {
         return {
-
+            hover: false,
         };
     },
     methods: {
-        click() {
-            this.$emit("click");
+        MouseEnter() {
+            this.hover = true;
+        },
+        MouseLeave() {
+            this.hover = false;
         },
     },
     computed: {
-        c: {
+        computedStyle: {
             get() {
-                return {
-                    "tag": true,
-                    "size-default": this.size === "" || this.size === "default",
-                    "size-small": this.size === "small",
-                    "size-large": this.size === "large",
-                    "type-default": this.type === "" || this.type === "default",
-                    "type-text": this.type === "" || this.type === "text",
-                    "type-info": this.type === "" || this.type === "info",
-                    "type-primary": this.type === "" || this.type === "primary",
-                    "type-success": this.type === "" || this.type === "success",
-                    "type-warning": this.type === "" || this.type === "warning",
-                    "type-error": this.type === "" || this.type === "error",
-                    "type-editor": this.type === "" || this.type === "editor",
-                };
-            }
+                let style = {};
+                let rgb = jc._Color.convertHexToRgb(this?.template?.color?.[this?.color] || this.color || "#f7f7f7");
+                switch (this.type) {
+                    case "border":
+                        style.border = `1px solid rgba(${rgb},1)`;
+                        style.color = `rgba(${rgb},1)`;
+                        break;
+                    case "borderAndBackgroundColor":
+                        style.border = `1px solid rgba(${rgb},1)`;
+                        style.backgroundColor = `rgba(${rgb},0.1)`;
+                        style.color = `rgba(${rgb},1)`;
+                        break;
+                    default:
+                        style.backgroundColor = `rgba(${rgb},1)`;
+                        style.color = `#ffffff`;
+                        break;
+                }
+                if (this?.color && this.color === "default") {
+                    style.color = `#515a6e`;
+                }
+                if (this?.size) {
+                    if (this?.template?.size?.[this?.size]) {
+                        style = {
+                            ...style,
+                            ...this.template.size[this.size],
+                        };
+                    }
+                }
+                if (this?.setting?.style?.default) {
+                    style = {
+                        ...style,
+                        ...this.setting.style.default,
+                    };
+                }
+                if (this.hover) {
+                    if (this?.setting?.style?.hover) {
+                        style = {
+                            ...style,
+                            ...this.setting.style.hover,
+                        };
+                    }
+                }
+                return style;
+            },
         },
+    },
+    created() {
+        this.template = {
+            size: {
+                small: {
+                    padding: "0 4px",
+                    height: "20px",
+                    fontSize: "12px",
+                },
+                default: {
+                    padding: "0 8px",
+                    height: "28px",
+                    fontSize: "14px",
+                },
+                large: {
+                    padding: "0 12px",
+                    height: "36px",
+                    fontSize: "16px",
+                },
+            },
+            color: {
+                default: "#f7f7f7",
+                primary: "#2d8cf0",
+                success: "#19be6b",
+                error: "#ed4014",
+                warning: "#ff9900",
+                magenta: "#eb2f96",
+                red: "#f5222d",
+                volcano: "#fa541c",
+                orange: "#fa8c16",
+                gold: "#faad14",
+                yellow: "#fadb14",
+                lime: "#a0d911",
+                green: "#52c41a",
+                cyan: "#13c2c2",
+                blue: "#1890ff",
+                geekblue: "#2f54eb",
+                purple: "#722ed1",
+            },
+        };
     },
 }
 </script>
-
 
 <style scoped>
 .tag {
@@ -64,106 +152,11 @@ export default {
     white-space: nowrap;
     appearance: none;
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-.size-small {
-    padding: 0 4px;
-    height: 20px;
-    font-size: 12px;
+.tag:hover {
+    opacity: 0.8;
 }
-
-.size-default {
-    padding: 0 8px;
-    height: 30px;
-    font-size: 14px;
-}
-
-.size-large {
-    padding: 0 12px;
-    height: 40px;
-    font-size: 16px;
-}
-
-.type-default {
-    background-color: #ffffff;
-    border: 1px solid #e8eaec;
-    color: #515a6e;
-}
-
-.type-default:hover {
-    opacity: 0.9;
-}
-
-.type-text {
-    background-color: transparent;
-    border: 1px solid transparent;
-    color: #515a6e;
-}
-
-.type-text:hover {
-    opacity: 0.9;
-}
-
-.type-info {
-    background-color: rgba(45, 183, 245, 0.9);
-    border: 1px solid rgba(45, 183, 245, 1);
-    color: #ffffff;
-}
-
-.type-info:hover {
-    opacity: 0.9;
-}
-
-.type-primary {
-    background-color: rgba(45, 140, 240, 0.9);
-    border: 1px solid rgba(45, 140, 240, 1);
-    color: #ffffff;
-}
-
-.type-primary:hover {
-    opacity: 0.9;
-}
-
-.type-success {
-    background-color: rgba(25, 190, 107, 0.9);
-    border: 1px solid rgba(25, 190, 107, 1);
-    color: #ffffff;
-}
-
-.type-success:hover {
-    opacity: 0.9;
-}
-
-.type-warning {
-    background-color: rgba(255, 153, 0, 0.9);
-    border: 1px solid rgba(255, 153, 0, 1);
-    color: #ffffff;
-}
-
-.type-warning:hover {
-    opacity: 0.9;
-}
-
-.type-error {
-    background-color: rgba(237, 64, 20, 0.9);
-    border: 1px solid rgba(237, 64, 20, 1);
-    color: #ffffff;
-}
-
-.type-error:hover {
-    opacity: 0.9;
-}
-
-.type-editor {
-    background-color: transparent;
-    border: 1px solid transparent;
-    color: #ffffff;
-}
-
-.type-editor:hover {
-    opacity: 0.9;
-}
-
 </style>

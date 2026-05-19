@@ -20,40 +20,44 @@ export default {
         return {
             component_list: [
                 {
-                    label: "代码编辑器：Ace",
-                    url: "/ace",
+                    label: "TestAce",
+                    url: "/TestAce",
                 },
                 {
-                    label: "头像",
-                    url: "/avatar",
+                    label: "TestAvatar",
+                    url: "/TestAvatar",
                 },
                 {
                     label: "TestBreadcrumb",
                     url: "/TestBreadcrumb",
                 },
                 {
-                    label: "按钮",
-                    url: "/button",
+                    label: "TestButton",
+                    url: "/TestButton",
                 },
                 {
-                    label: "多选",
-                    url: "/checkbox",
+                    label: "TestCheckbox",
+                    url: "/TestCheckbox",
                 },
                 {
                     label: "TestContextmenu",
                     url: "/TestContextmenu",
                 },
                 {
-                    label: "复制",
-                    url: "/copy",
+                    label: "TestCopy",
+                    url: "/TestCopy",
                 },
                 {
-                    label: "时间",
-                    url: "/datetime",
+                    label: "TestDatetime",
+                    url: "/TestDatetime",
                 },
                 {
-                    label: "表单",
-                    url: "/form",
+                    label: "TestDropdown",
+                    url: "/TestDropdown",
+                },
+                {
+                    label: "TestForm",
+                    url: "/TestForm",
                 },
                 {
                     label: "TestFormAce",
@@ -64,40 +68,40 @@ export default {
                     url: "/TestFormInput",
                 },
                 {
-                    label: "单文本输入框",
-                    url: "/input",
+                    label: "TestInput",
+                    url: "/TestInput",
                 },
                 {
-                    label: "加载中",
-                    url: "/loading",
+                    label: "TestLoading",
+                    url: "/TestLoading",
                 },
                 {
-                    label: "菜单",
-                    url: "/menu",
+                    label: "TestMenu",
+                    url: "/TestMenu",
                 },
                 {
-                    label: "消息",
-                    url: "/message",
+                    label: "TestMessage",
+                    url: "/TestMessage",
                 },
                 {
-                    label: "弹框",
-                    url: "/modal",
+                    label: "TestModal",
+                    url: "/TestModal",
                 },
                 {
-                    label: "分页",
+                    label: "TestPage",
                     url: "/TestPage",
                 },
                 {
-                    label: "单选",
-                    url: "/radio",
+                    label: "TestRadio",
+                    url: "/TestRadio",
                 },
                 {
-                    label: "下拉框",
-                    url: "/select",
+                    label: "TestSelect",
+                    url: "/TestSelect",
                 },
                 {
-                    label: "标签",
-                    url: "/tag",
+                    label: "TestTag",
+                    url: "/TestTag",
                 },
             ],
         };
