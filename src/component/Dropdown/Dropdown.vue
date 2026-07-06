@@ -1,19 +1,21 @@
 <template>
     <div style="position: relative;">
 
-        <slot name="trigger">
-            <div>
-                <Button
-                    @click="show($event)">
-                    <div style="display: flex; align-items: center;">
-                        <div>更多</div>
-                        <div>
-                            <i class="ri-arrow-down-s-line"></i>
+        <div
+            @click="show($event)">
+            <slot name="trigger">
+                <div>
+                    <Button>
+                        <div style="display: flex; align-items: center;">
+                            <div>更多</div>
+                            <div>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
                         </div>
-                    </div>
-                </Button>
-            </div>
-        </slot>
+                    </Button>
+                </div>
+            </slot>
+        </div>
 
         <slot name="menu">
             <div
